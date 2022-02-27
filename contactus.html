@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logistic Website</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+
+    <style>
+.contact_top {
+    width: 100%;
+    height: auto;
+    padding: 5rem 0rem 10rem 0rem;
+    background-image: url(assets/img/contact_bg2.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    box-shadow: inset 0 0 0 2000px rgb(0 0 0 / 10%) !important;
+}
+.contact_top h2 {
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    font-size: 40px;
+    font-weight: 700;
+}
+.contact_top p {
+    text-align: center;
+    color: whitesmoke;
+    font-size: 20px;
+    font-weight: 400;
+}
+.contact_us_new {
+    width: 100%;
+    height: auto;
+    background-color: #ffffff;
+    padding: 4rem 0rem;
+}
+.contactus {
+    padding: 2rem 1rem 1rem 1rem;
+    margin-top: -11rem;
+    background-color: white !important;
+    border-radius: 0px !important;
+    box-shadow: 0px 4px 7px -2px rgb(0 0 0 / 20%);
+}
+.contact_us_input {
+    width: 100%;
+    height: auto;
+    padding: .8rem 1rem;
+    border: 1px solid #ccc !important;
+    margin-bottom: 20px !important;
+    outline: none;
+    border-radius: 3px;
+    font-size: 14px;
+}
+.contact_submit {
+    width: 100%;
+    height: auto;
+    padding: .8rem;
+    color: white;
+    background-color: #012169;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+}
+.contact_us_new .cont {
+    padding: 1rem;
+    box-shadow: 0px 4px 7px -2px rgb(0 0 0 / 20%);
+}
+.contact_us_new .cont h1 {
+    font-size: 23px;
+    color: black;
+    line-height: 1.2;
+    font-weight: 400;
+    margin-bottom: 0rem !important;
+}
+.contact_us_new .cont .contact_hosri {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+.cont .flex {
+    width: 100%;
+    height: auto;
+    display: flex;
+    margin-left: 2rem;
+    margin-bottom: 4rem;
+    margin-top: 2rem;
+}
+.cont .flex .left {
+    width: 15%;
+    height: auto;
+}
+.cont .flex .right {
+    width: 85%;
+    height: auto;
+    margin-top: -.5rem;
+}
+.cont .flex .left .fa, .fas {
+    color: #012169;
+    font-size: 30px;
+}
+.cont .subbb {
+    color: gray;
+    font-size: 18px;
+    margin-right: 1rem;
+    margin-bottom: .5rem;
+}
+.contact_us_new .base_heading_h2 {
+    font-weight: 700;
+    font-size: 25px;
+    color: black;
+    margin-bottom: .5rem;
+    margin-top: 0rem;
+    line-height: 1.2;
+}
+    </style>
+
+</head>
+
+<body>
+    <div class="contact_top">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>Let's connect With Experts</p>
+        </div>
+    </div>
+
+    <main class="contact_us_new">
+        <div class="container ">
+
+            <div class="container px-3 ">
+                <div class="row justify-content-center  contactus">
+                    <div class="col-md-12 mob-ded">
+                        <div class="row justify-content-around">
+                            <div class="col-md-7">
+                                <!-- Form  -->
+                                <form action="https://alceneducation.com/frontend/contact/insert_data" method="post">
+                                    <input class="contact_us_input" type="text" name="name"
+                                        placeholder="Enter Your Name">
+                                    <input class="contact_us_input" type="email" name="email"
+                                        placeholder="Enter Your Email">
+                                    <input class="contact_us_input" type="number" name="mob"
+                                        placeholder="Enter Contact Number">
+                                    <input class="contact_us_input" type="text" name="sub" placeholder="Enter Subject">
+                                    <textarea class="contact_us_input" name="msg" placeholder="Enter Message For us"
+                                        cols="30" rows="5"></textarea>
+                                    <button class="contact_submit">Submit</button>
+                                </form>
+                            </div>
+                            <div class="col-md-5  cont">
+                                <h1>If you prefer a more tangible form of communication we're here:</h1>
+                                <hr class="contact_hosri">
+                                <div class="flex">
+                                    <div class="left">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                    <div class="right">
+                                        <p class="subbb">Reach us on our</p>
+                                        <h2 class="h2_head base_heading_h2">Office</h2>
+                                        <p class="subbb">29, 2nd Cross, Gundappa Reddy Layout Cholanagar, R.T. Nagar
+                                            Post Bangalore 560032</p>
+                                    </div>
+                                </div>
+                                <div class="flex">
+                                    <div class="left">
+                                        <i class="fa fa-phone" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="right">
+                                        <p class="subbb">Give us a</p>
+                                        <h2 class="h2_head base_heading_h2">Call</h2>
+                                        <p class="subbb">+91 8050005101</p>
+                                        <p class="subbb">+91 8963006098</p>
+                                    </div>
+                                </div>
+                                <div class="flex">
+                                    <div class="left">
+                                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="right">
+                                        <p class="subbb">Drop On</p>
+                                        <h2 class="h2_head base_heading_h2">Email</h2>
+                                        <p class="subbb">viren.dogman@gmail.com</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="spacer_m"></div>
+
+
+
+            <!-- End Main -->
+
+    </main>
+</body>
+
+</html>
