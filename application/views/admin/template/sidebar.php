@@ -99,7 +99,7 @@ $parts = basename($url);
 
 
 
-        <li class="nav-item <?php echo ($parts == 'adduser') ? "active" : "" ?>">
+        <!--li class="nav-item <?php echo ($parts == 'adduser') ? "active" : "" ?>">
           <a class="nav-link " href="<?php echo base_url(); ?>admin/adduser"><i class="fas fa-fw fa-table"></i><span>Add User</span></a>
         </li>
 
@@ -154,7 +154,7 @@ $parts = basename($url);
         </li>
 
 
-        <!-- Divider -->
+      
         <hr class="sidebar-divider d-none d-md-block">
         <div class="sidebar-heading">
           User Data
