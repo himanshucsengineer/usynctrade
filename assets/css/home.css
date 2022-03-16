@@ -1,0 +1,95 @@
+.hero_section {
+    width: 100%;
+    height: auto;
+
+}
+.hero_section .carousel-item img{
+    width: 100%;
+    height: 500px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.home_product{
+    width: 100%;
+    height: auto;
+    padding: 4rem 0rem;
+    background-color: rgb(242, 247, 252);
+}
+.home_product h2{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600 !important;
+    line-height: 48px;
+    position: relative;
+    margin-bottom: 70px;
+}
+.home_product h2::after{
+    position: absolute;
+    content: "";
+    height: 2px;
+    background-color: #ff6a00;
+    bottom: -10px;
+    width: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.home_product .main_card{
+    width: 100%;
+    height: auto;
+    box-shadow: 0 1px 2px 0 rgb(20 36 51 / 20%), 0 1px 4px 0 rgb(20 36 51 / 8%);
+    margin-bottom: 2rem;
+}
+.home_product .main_card .main_image{
+    width: 100%;
+    height: 170px;
+}
+.home_product .main_card .inner_card{
+    width: 100%;
+    height: auto;
+    background-color: #ffffff;
+    padding:  1rem;
+}
+.home_product .main_card .inner_card .flex_1{
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+.home_product .main_card .inner_card .flex_1 .left{
+    width: 85%;
+}
+.home_product .main_card .inner_card .flex_1 .left p{
+    margin: 0px;
+    font-size: 17px;
+    font-weight: 500;
+    color: rgb(71, 70, 70);
+}
+.home_product .main_card .inner_card .flex_1 .right{
+    width: 15%;
+}
+.home_product .main_card .inner_card .flex_1 .right img{
+    width: 100%;
+}
+.home_product .load_more{
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+.home_product .load_more button{
+    width: 7rem;
+    height: auto;
+    padding: .8rem;
+    border: none;
+    outline: none;
+    background-color: #ff6a00;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    transition: .5s;
+}
+.home_product .load_more button:hover{
+    background-color: #00a9ea;
+    border-radius: 25px;
+}

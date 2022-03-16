@@ -1,0 +1,108 @@
+.contact_top {
+    width: 100%;
+    height: auto;
+    padding: 5rem 0rem 10rem 0rem;
+    background-image: url(../../assets/img/contact_bg2.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    box-shadow: inset 0 0 0 2000px rgb(0 0 0 / 10%) !important;
+}
+.contact_top h2 {
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    font-size: 40px;
+    font-weight: 700;
+}
+.contact_top p {
+    text-align: center;
+    color: whitesmoke;
+    font-size: 20px;
+    font-weight: 400;
+}
+.contact_us_new {
+    width: 100%;
+    height: auto;
+    background-color: #ffffff;
+    padding: 4rem 0rem;
+}
+.contactus {
+    padding: 2rem 1rem 1rem 1rem;
+    margin-top: -11rem;
+    background-color: white !important;
+    border-radius: 0px !important;
+    box-shadow: 0px 4px 7px -2px rgb(0 0 0 / 20%);
+}
+.contact_us_input {
+    width: 100%;
+    height: auto;
+    padding: .8rem 1rem;
+    border: 1px solid #ccc !important;
+    margin-bottom: 20px !important;
+    outline: none;
+    border-radius: 3px;
+    font-size: 14px;
+}
+.contact_submit {
+    width: 100%;
+    height: auto;
+    padding: .8rem;
+    color: white;
+    background-color: #ff6a00;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+}
+.contact_us_new .cont {
+    padding: 1rem;
+    box-shadow: 0px 4px 7px -2px rgb(0 0 0 / 20%);
+}
+.contact_us_new .cont h1 {
+    font-size: 23px;
+    color: black;
+    line-height: 1.2;
+    font-weight: 400;
+    margin-bottom: 0rem !important;
+}
+.contact_us_new .cont .contact_hosri {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+.cont .flex {
+    width: 100%;
+    height: auto;
+    display: flex;
+    margin-left: 2rem;
+    margin-bottom: 4rem;
+    margin-top: 2rem;
+}
+.cont .flex .left {
+    width: 15%;
+    height: auto;
+}
+.cont .flex .right {
+    width: 85%;
+    height: auto;
+    margin-top: -.5rem;
+}
+.cont .flex .left .fa, .fas {
+    color: #ff6a00;
+    font-size: 30px;
+}
+.cont .subbb {
+    color: gray;
+    font-size: 18px;
+    margin-right: 1rem;
+    margin-bottom: .5rem;
+}
+.contact_us_new .base_heading_h2 {
+    font-weight: 700;
+    font-size: 25px;
+    color: black;
+    margin-bottom: .5rem;
+    margin-top: 0rem;
+    line-height: 1.2;
+}
