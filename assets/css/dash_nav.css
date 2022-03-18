@@ -1,0 +1,121 @@
+.main_head {
+    width: 100%;
+    height: auto;
+    z-index: 2;
+    border-bottom: 1px solid #cdcdcd;
+    padding-top: .5rem;
+    padding-bottom: .3rem;
+}
+.main_head  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 25;
+    top: 0;
+    left: 0px;
+    background-color: #2d3036;
+    overflow-x: hidden;
+    transition: 0.3s;
+}
+.main_head .sidenav .closebtn {
+    position: relative;
+    margin-top: 0rem;
+    float: right;
+    font-size: 36px;
+    color: #ee0f6f;
+    font-weight: 100;
+    margin-right: 20px;
+}
+.main_head .menu_but {
+    display: none;
+    background-color: white;
+    color: #11648e;
+    border: 1px solid #ee0f6f;
+    outline: none;
+}
+.slider_logo {
+    width: 120px;
+    padding-top: .5rem;
+    padding-bottom: 1rem;
+}
+.main_head .sidenav button {
+    width: 100%;
+    height: auto;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border: none;
+    outline: none;
+    color: #f9f9f9;
+    background-color: transparent;
+    font-size: 16px;
+    font-weight: 500;
+    padding-left: 1.5rem;
+    margin-bottom: 5px;
+    text-align: left;
+    transition: .5s;
+}
+.main_head .sidenav .active {
+    background-color :#20bf55;
+    background-image :linear-gradient(315deg, #20bf55 0%, #01baef 74%);
+}
+.main_head  .sidenav .social {
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+    padding-left: 1rem;
+    margin-top: 1.5rem;
+}
+.main_head  .sidenav .social a {
+    text-decoration: none;
+    margin-right: .5rem;
+    padding: 6px 13px;
+    color: white;
+    border: none;
+    font-size: 20px;
+    border-radius: 50%;
+    transition: .6s;
+}
+.main_head  .sidenav .social .fb {
+    background-color: #3b5998;
+}
+.main_head  .sidenav .social .insta {
+    background: #f09433;
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+}
+.main_head  .sidenav .social .youtube {
+    background-color: #FF0000;
+}
+.main_head  .sidenav .social .linkdin {
+    background-color: #0e76a8;
+}
+.user_box {
+    background-color: rgb( 243, 242, 250 ) !important;
+    margin-top: -3rem !important;
+    margin-bottom: -2.5rem !important;
+    padding-top: 1.8rem !important;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.avtar {
+    width: 40px;
+    margin-top: -.2rem;
+    margin-right: -1.5rem;
+}
+.main_head .nav-link {
+    font-family: sohne,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: rgb( 95, 96, 96 );
+    line-height: 1.4;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 16px;
+    margin-left: .5rem;
+    transition: .5s;
+}
+@media only screen and (max-width: 600px){
+    .main_head .menu_but {
+        display: block !important;
+    }
+}

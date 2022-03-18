@@ -1,0 +1,162 @@
+.user_desh {
+    width: 100%;
+    height: auto;
+    background-color: #f4f4f4;
+    box-sizing: border-box;
+}
+.user_desh .right {
+    width: 78%;
+    height: auto;
+    float: right;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    background-color: #ebf0f2;
+}
+.your_page_head {
+    margin-bottom: 1rem;
+    color: grey;
+    font-weight: 400;
+}
+
+.user_desh .right .box {
+    width: 100%;
+    height: auto;
+    background-color: white !important;
+    border: 1px solid #cdcdcd;
+    margin-bottom: 2rem;
+}
+.user_desh .right .box .flex {
+    flex-wrap: wrap;
+    display: flex;
+}
+.user_desh .right .box .flex .card {
+    width: 25%;
+    height: auto;
+    border: 1px solid #cdcdcd;
+    border-radius: 0px !important;
+    padding-bottom: 1.4rem;
+    padding-top: 1.4rem;
+    background-color: white;
+    text-align: center;
+    border-top: none;
+    border-right: none;
+}
+.hori {
+    color: grey;
+    border-bottom: 3px;
+}
+.user_desh .right .box {
+    width: 100%;
+    height: auto;
+    background-color: white !important;
+    border: 1px solid #cdcdcd;
+    margin-bottom: 2rem;
+}
+.user_desh .right .box .t_box {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+#campaign_paginate {
+    margin-top: 1rem !important;
+}
+.page-item.active .page-link {
+    background: linear-gradient(to bottom, #fff 0%, #dcdcdc 100%) !important;
+    outline: none !important;
+    border-radius: 2px !important;
+    color: #333 !important;
+    border: 1px solid #979797 !important;
+    background: white;
+}
+
+.user_desh .right .box {
+    width: 100%;
+    height: auto;
+    background-color: white !important;
+    border: 1px solid #cdcdcd;
+    margin-bottom: 2rem;
+}
+.user_desh .right .box .head {
+    width: 100%;
+    height: auto;
+    background-color: #f9f9f9 !important;
+    border: 1px solid #cdcdcd;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    padding-top: 1.4rem;
+    padding-bottom: 1.4rem;
+}
+.user_desh .right .box .head h5 {
+    color: #ff6a00;
+    text-align: center;
+    text-transform: uppercase;
+}
+.user_desh .right .box .pro {
+    width: 100%;
+    height: auto;
+    margin-top: 2rem;
+}
+.user_desh .right .box .pro .inpu {
+    width: 100%;
+    height: auto;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    padding-left: 1rem;
+    border: 1px solid #cdcdcd;
+    outline: none;
+    margin-bottom: 1rem;
+}
+
+.user_desh .right .box .pro button {
+    width: 8rem;
+    height: auto;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    color: white;
+    background-color :#20bf55;
+    background-image :linear-gradient(315deg, #20bf55 0%, #01baef 74%);
+    
+    border: none;
+    text-transform: uppercase;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    outline: none;
+    margin-right: 1rem;
+}
+
+.user_desh .right .box .pro  .card1 {
+    width: 70%;
+    height: auto;
+}
+.user_desh .right .box .pro  .card2 {
+    width: 30%;
+    height: auto;
+}
+.user_desh .right .box .pro  .card1 .mob_view {
+    width: 100% !important;
+    height: auto !important;
+    padding-top: .5rem !important;
+    padding-bottom: .5rem !important;
+    border: 1px solid #cdcdcd !important;
+    border-radius: 0px !important;
+    padding-left: 1rem;
+    outline: none !important;
+    margin-bottom: 2rem;
+    margin-left: 1rem;
+}
+.user_desh .right .box .pro  .card2 .req_but {
+   margin-top: -0rem;
+    width: 100%;
+    height: auto;
+    padding-top: .5rem;
+    padding-bottom: .6rem;
+    color: white;
+    border: none;
+    outline: none;
+    background-color :#20bf55;
+    background-image :linear-gradient(315deg, #20bf55 0%, #01baef 74%);
+    margin-left: -1rem;
+   
+}

@@ -58,7 +58,11 @@ $route['register'] = 'frontend/signup';
 $route['signin'] = 'frontend/login';
 $route['sez_industry'] = 'frontend/industry';
 $route['i-trade'] = 'frontend/itrade';
-
+$route['user/dashboard'] = 'frontend/user/dashboard';
+$route['user/profile'] = 'frontend/user/profile';
+$route['user/your_product'] = 'frontend/user/your_product';
+$route['user/post_by_leads'] = 'frontend/user/post_by_leads';
+$route['user/trade_inqury'] = 'frontend/user/trade_inqury';
 
  $route['404_override'] = 'Error404';
 $route['translate_uri_dashes'] = FALSE;

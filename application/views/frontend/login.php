@@ -31,14 +31,14 @@
                                 <button onclick="myEmail()" id="emailback" class="emial">Email Address</button>
                             </div>
                         </div-->
-                        <form action="" method="POST">
+                        <form action="<?php echo base_url()?>frontend/login/login" method="POST">
                          
                     
                          
                                 <label for="">Email</label>
-                                <input type="email" name="" placeholder="Enter Your Email">
+                                <input type="email" name="email" placeholder="Enter Your Email">
                                 <label for="">Password</label>
-                                <input type="password" name="" placeholder="Enter Your Password">
+                                <input type="password" name="password" placeholder="Enter Your Password">
                                 <p>New User? <a href="<?php echo base_url()?>register">Signup</a></p><span class="forgot"><a href="">Forgot password</a></span>
                         
                                 <button id="login_butt">Login</button>
