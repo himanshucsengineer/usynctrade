@@ -9,7 +9,7 @@ class Login extends CI_controller
  
     public function index()
     {
-
+ 
 
         $this->load->view('frontend/template/header');
       //  $this->load->view('frontend/template/navbar');
@@ -39,7 +39,7 @@ class Login extends CI_controller
             }
         }
         if ($login_success == 1) {
-            redirect(base_url() . 'user/dashboard');
+            redirect(base_url());
         } else {
             $this->session->set_flashdata('error', 'Wrong Email Or Password');
             redirect(base_url() . 'signin');

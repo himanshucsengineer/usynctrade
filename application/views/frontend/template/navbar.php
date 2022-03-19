@@ -217,6 +217,27 @@
     margin-top:-.01rem;
 }
 </style>
+
+<?php if(!isset($_SESSION['email'])){
+        $login = '<li class=" nav-item">
+        <a href="'.base_url().'signin" class="nav-link " >Login / Signup</a>
+    </li>';
+    }else{
+        $login = '<li class=" dropdown nav-item">
+        <a href="" class="nav-link dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">'.$_SESSION['name'].'</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="'.base_url().'user/dashboard">Dashboard</a>
+            <a class="dropdown-item" href="'.base_url().'user/profile">Profile & Setting</a>
+            <a class="dropdown-item" href="'.base_url().'user/your_product">Your Products</a>
+            <a class="dropdown-item" href="'.base_url().'user/post_by_leads">Post by Leads</a>
+            <a class="dropdown-item" href="'.base_url().'user/trade_inqury">Trade Inqury</a>
+            <a class="dropdown-item" href="'.base_url().'frontend/logout">Logout</a>
+        </div>
+        </li>
+    
+    ';
+    }
+    ?>
 <div class="bs-canvas-overlay bs-canvas-anim  position-fixed w-100 h-100"></div>
 
 <!-- Off-canvas sidebar markup, left/right or both. -->
@@ -282,9 +303,7 @@
                                             </div>
                                         </div>
                                     </li>
-                                    <li class=" nav-item">
-                                        <a href="<?php echo base_url()?>signin" class="nav-link">Login / Signup</a>
-                                    </li>
+                                    <?php echo $login?>
                                 </ul>
                             </div>
                         </nav> <!-- navbar -->

@@ -32,10 +32,10 @@
     </div>
 
     <div class="home_product">
-        <div class="container">
+        <div class="container-fluid">
             <h2>Our Products</h2>
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-md-2">
                     <div class="main_card">
                         <img class="main_image" src="assets/img/slider2.jpg" alt="">
                         <div class="inner_card">
@@ -50,7 +50,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-2">
                     <div class="main_card">
                         <img class="main_image" src="assets/img/slider2.jpg" alt="">
                         <div class="inner_card">
@@ -65,7 +65,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-2">
                     <div class="main_card">
                         <img class="main_image" src="assets/img/slider2.jpg" alt="">
                         <div class="inner_card">
@@ -80,7 +80,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-2">
                     <div class="main_card">
                         <img class="main_image" src="assets/img/slider2.jpg" alt="">
                         <div class="inner_card">
@@ -95,7 +95,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-2">
                     <div class="main_card">
                         <img class="main_image" src="assets/img/slider2.jpg" alt="">
                         <div class="inner_card">
@@ -110,7 +110,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-2">
                     <div class="main_card">
                         <img class="main_image" src="assets/img/slider2.jpg" alt="">
                         <div class="inner_card">
@@ -125,7 +125,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-2">
                     <div class="main_card">
                         <img class="main_image" src="assets/img/slider2.jpg" alt="">
                         <div class="inner_card">
@@ -140,7 +140,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-2">
                     <div class="main_card">
                         <img class="main_image" src="assets/img/slider2.jpg" alt="">
                         <div class="inner_card">
@@ -155,7 +155,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-2">
                     <div class="main_card">
                         <img class="main_image" src="assets/img/slider2.jpg" alt="">
                         <div class="inner_card">
@@ -170,7 +170,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-2">
                     <div class="main_card">
                         <img class="main_image" src="assets/img/slider2.jpg" alt="">
                         <div class="inner_card">
@@ -185,7 +185,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-2">
                     <div class="main_card">
                         <img class="main_image" src="assets/img/slider2.jpg" alt="">
                         <div class="inner_card">
@@ -200,7 +200,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-2">
                     <div class="main_card">
                         <img class="main_image" src="assets/img/slider2.jpg" alt="">
                         <div class="inner_card">
@@ -215,7 +215,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-2">
                     <div class="main_card">
                         <img class="main_image" src="assets/img/slider2.jpg" alt="">
                         <div class="inner_card">
@@ -230,7 +230,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-2">
                     <div class="main_card">
                         <img class="main_image" src="assets/img/slider2.jpg" alt="">
                         <div class="inner_card">
@@ -245,7 +245,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-2">
                     <div class="main_card">
                         <img class="main_image" src="assets/img/slider2.jpg" alt="">
                         <div class="inner_card">

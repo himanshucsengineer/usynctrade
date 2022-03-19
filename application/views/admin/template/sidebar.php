@@ -101,7 +101,7 @@ $parts = basename($url);
 
         <!--li class="nav-item <?php echo ($parts == 'contactdata') ? "active" : "" ?>">
           <a class="nav-link " href="<?php echo base_url(); ?>admin/contactdata"><i class="fas fa-fw fa-table"></i><span>Contact Data</span></a>
-        </li>
+        </li-->
 
 
 
@@ -109,20 +109,19 @@ $parts = basename($url);
         <li class="nav-item ">
           <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#menu" aria-expanded="true" aria-controls="collapsePages">
             <i class="fas fa-fw fa-folder"></i>
-            <span>Menu</span>
+            <span>Sez Industry</span>
           </a>
           <div id="menu" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
             <div class="py-2 collapse-inner rounded">
-              <a class="collapse-item " href="<?php echo base_url(); ?>admin/menu" style="font-size:1.3rem; ">Upload Menu</a>
-              <a class="collapse-item " href="<?php echo base_url(); ?>admin/chaap" style="font-size:1.3rem; ">Chaap Data</a>
-              <a class="collapse-item " href="<?php echo base_url(); ?>admin/burger" style="font-size:1.3rem; ">Burger Data</a>
-              <a class="collapse-item " href="<?php echo base_url(); ?>admin/salon" style="font-size:1.3rem; ">Salon Data</a>
+              <a class="collapse-item " href="<?php echo base_url(); ?>admin/sez/add" style="font-size:1.3rem; ">Add Sez Industry</a>
+              <a class="collapse-item " href="<?php echo base_url(); ?>admin/sez/view" style="font-size:1.3rem; ">View ALL Sez Industry</a>
+
               <div class="collapse-divider"></div>
             </div>
           </div>
         </li>
 
-        <li class="nav-item ">
+        <!--li class="nav-item ">
           <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#course" aria-expanded="true" aria-controls="collapsePages">
             <i class="fas fa-fw fa-folder"></i>
             <span>Course</span>
@@ -165,7 +164,12 @@ $parts = basename($url);
         <li class="nav-item <?php echo ($parts == 'contactdata') ? "active" : "" ?>">
           <a class="nav-link " href="<?php echo base_url(); ?>admin/contactdata"><i class="fas fa-fw fa-table"></i><span>Contact Data</span></a>
         </li>
-
+        <li class="nav-item <?php echo ($parts == 'importdata') ? "active" : "" ?>">
+          <a class="nav-link " href="<?php echo base_url(); ?>admin/importdata"><i class="fas fa-fw fa-table"></i><span>Import Data</span></a>
+        </li>
+        <li class="nav-item <?php echo ($parts == 'exportdata') ? "active" : "" ?>">
+          <a class="nav-link " href="<?php echo base_url(); ?>admin/exportdata"><i class="fas fa-fw fa-table"></i><span>Export Data</span></a>
+        </li>
         <hr class="sidebar-divider">
 
         <!-- Sidebar Toggler (Sidebar) -->
