@@ -53,6 +53,7 @@ $route['default_controller'] = 'home';
 $route['logout'] = 'frontend/logout';
 $route['contact-us'] = 'frontend/contact';
 $route['term-condition'] = 'frontend/term';
+$route['join-this-deal/(:any)'] = 'frontend/join_deal/index/$i';
 $route['privacy-policy'] = 'frontend/privacy';
 $route['register'] = 'frontend/signup';
 $route['signin'] = 'frontend/login';

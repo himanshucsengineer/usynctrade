@@ -121,16 +121,16 @@ $parts = basename($url);
           </div>
         </li>
 
-        <!--li class="nav-item ">
+        <li class="nav-item ">
           <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#course" aria-expanded="true" aria-controls="collapsePages">
             <i class="fas fa-fw fa-folder"></i>
-            <span>Course</span>
+            <span>Products</span>
           </a>
           <div id="course" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
             <div class="py-2 collapse-inner rounded">
-              <a class="collapse-item " href="<?php echo base_url(); ?>admin/allpost" style="font-size:1.3rem; ">All Courses</a>
-              <a class="collapse-item " href="<?php echo base_url(); ?>admin/newpost" style="font-size:1.3rem; ">Add New Course</a>
-              <a class="collapse-item " href="<?php echo base_url(); ?>admin/editblog" style="font-size:1.3rem; ">Edit Course</a>
+              <a class="collapse-item " href="<?php echo base_url(); ?>admin/product/add" style="font-size:1.3rem; ">Add Product</a>
+              <a class="collapse-item " href="<?php echo base_url(); ?>admin/product/view" style="font-size:1.3rem; ">View All Products</a>
+
 
               <div class="collapse-divider"></div>
             </div>
@@ -140,17 +140,17 @@ $parts = basename($url);
         <li class="nav-item ">
           <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePagesss" aria-expanded="true" aria-controls="collapsePages">
             <i class="fas fa-fw fa-folder"></i>
-            <span>Add Plans</span>
+            <span>Join Deal</span>
           </a>
           <div id="collapsePagesss" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
             <div class="py-2 collapse-inner rounded">
-              <a class="collapse-item " href="<?php echo base_url(); ?>admin/course" style="font-size:1.3rem; ">Course Moduls</a>
-              <a class="collapse-item " href="<?php echo base_url(); ?>admin/plans" style="font-size:1.3rem; ">Plans</a>
+              <a class="collapse-item " href="<?php echo base_url(); ?>admin/join_deal/add" style="font-size:1.3rem; ">Add Deal</a>
+              <a class="collapse-item " href="<?php echo base_url(); ?>admin/join_deal/view" style="font-size:1.3rem; ">All Deal</a>
 
               <div class="collapse-divider"></div>
             </div>
           </div>
-        </li-->
+        </li>
 
 
       

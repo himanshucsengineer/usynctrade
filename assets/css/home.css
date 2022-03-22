@@ -40,7 +40,7 @@
     width: 100%;
     height: auto;
     box-shadow: 0 1px 2px 0 rgb(20 36 51 / 20%), 0 1px 4px 0 rgb(20 36 51 / 8%);
-    margin-bottom: 2rem;
+   
 }
 .home_product .main_card .main_image{
     width: 100%;
@@ -92,4 +92,14 @@
 .home_product .load_more button:hover{
     background-color: #00a9ea;
     border-radius: 25px;
+}
+.home_product_flex{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.home_product_flex .home_product_card{
+    width: 20%;
+    padding: 1rem;
 }
