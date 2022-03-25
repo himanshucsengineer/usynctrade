@@ -282,7 +282,7 @@
                         <th>Product </th>
                         <th>Date</th>
                         <th>Category</th>
-                        <th>Target Price</th>
+                        <th>Product Image</th>
                         <th>Quantity Required</th>
                         <th>Status</th>
                     </tr>
@@ -293,10 +293,10 @@
                         <td><?php echo $value['name']?> <br> <?php foreach($country as $val){ if($val['Country'] == $value['destination_country']){ echo $val['Country']; echo '<img class="flag_class" src="'.$val['Flag_image_url'].'">';}}?></td>
                         <td><?php echo $value['date']?></td>
                         <td><?php echo $value['category']?></td>
-                        <td><?php echo $value['target_price']?></td>
+                        <td><img width="100px" src="<?php echo base_url()?>upload/join_deal/<?php echo $value['image']?>"></td>
                         <td><?php echo $value['quantity']?></td>
                         <td><?php echo ($value['status'] == 0) ? "<span class='text-white badge badge-warning'>Closed</span>" : "<span class='text-white badge badge-success'>Active</span>"; ?></td>
-                        <td><a href="<?php echo base_url()?>join-this-deal/<?php echo $value['id']?>"><button class="btn btn-primary">Join this Deal</button></a></td>
+                        <td><a href="<?php echo base_url()?>join-this-deal/<?php echo $value['id']?>"><button class="btn btn-primary">Make this Deal</button></a></td>
                     </tr>
                     <?php }?>
                 </tbody>

@@ -8,6 +8,16 @@ class Joindealmodel extends CI_Model
         return  $this->db->insert('join_deal', $data);
     }
     
+
+    function join_deal_query($data)
+    {
+        return  $this->db->insert('join_deal_query', $data);
+    }
+    function fetch_join_deal_query()
+    {
+      return $this->db->get('join_deal_query')->result_array();
+    }
+
     public function fetch_country()
     {
       return $this->db->get('country_flag')->result_array();

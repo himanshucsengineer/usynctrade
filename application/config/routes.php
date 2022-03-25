@@ -62,6 +62,7 @@ $route['i-trade'] = 'frontend/itrade';
 $route['import'] = 'frontend/import';
 $route['export'] = 'frontend/export';
 $route['user/dashboard'] = 'frontend/user/dashboard';
+$route['user/joindeal'] = 'frontend/user/joindeal';
 $route['user/profile'] = 'frontend/user/profile';
 $route['user/your_product'] = 'frontend/user/your_product';
 $route['user/post_by_leads'] = 'frontend/user/post_by_leads';

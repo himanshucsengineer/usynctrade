@@ -40,8 +40,9 @@ $parts = basename($url);
                             <a href="<?php echo base_url()?>user/profile"><button class="<?php echo ($parts == 'profile') ? "active" : "" ?>"><span style="font-size:20px; margin-right:1.5rem;"><i
                                             class="fa fa-user"></i></span>Profile & Setting</button></a>
                             <a href="<?php echo base_url()?>user/your_product"><button class="<?php echo ($parts == 'your_product') ? "active" : "" ?>"><span style="font-size:20px; margin-right:1.5rem;"><i class="fas fa-tasks"></i></span>Your Product</button></a>
-                            <a href="<?php echo base_url()?>user/post_by_leads"><button class="<?php echo ($parts == 'post_by_leads') ? "active" : "" ?>"><span style="font-size:20px; margin-right:1.5rem;"><i class="fas fa-cart-arrow-down"></i></span>Post By Leads</button></a>
+                            <a href="<?php echo base_url()?>import"><button class="<?php echo ($parts == 'post_by_leads') ? "active" : "" ?>"><span style="font-size:20px; margin-right:1.5rem;"><i class="fas fa-cart-arrow-down"></i></span>Post By Leads</button></a>
                             <a href="<?php echo base_url()?>user/trade_inqury"><button class="<?php echo ($parts == 'trade_inqury') ? "active" : "" ?>"><span style="font-size:20px; margin-right:1.5rem;"><i class="fas fa-bell"></i></span>Trade Inqury</button></a>
+                            <a href="<?php echo base_url()?>user/joindeal"><button class="<?php echo ($parts == 'joindeal') ? "active" : "" ?>"><span style="font-size:20px; margin-right:1.5rem;"><i class="fas fa-bell"></i></span>Join Deal Inqury</button></a>
                             <a href="<?php echo base_url()?>frontend/logout"><button><span style="font-size:20px; margin-right:1.5rem;"><i class="fas fa-sign-out-alt"></i></span>Logout</button></a>
                         </div>
 

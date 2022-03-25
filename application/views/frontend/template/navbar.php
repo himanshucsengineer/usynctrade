@@ -229,8 +229,9 @@
             <a class="dropdown-item" href="'.base_url().'user/dashboard">Dashboard</a>
             <a class="dropdown-item" href="'.base_url().'user/profile">Profile & Setting</a>
             <a class="dropdown-item" href="'.base_url().'user/your_product">Your Products</a>
-            <a class="dropdown-item" href="'.base_url().'user/post_by_leads">Post by Leads</a>
+            <a class="dropdown-item" href="'.base_url().'import">Post by Leads</a>
             <a class="dropdown-item" href="'.base_url().'user/trade_inqury">Trade Inqury</a>
+            <a class="dropdown-item" href="'.base_url().'user/joindeal">Join Deal Inqury</a>
             <a class="dropdown-item" href="'.base_url().'frontend/logout">Logout</a>
         </div>
         </li>

@@ -10,16 +10,23 @@
     height: auto;
     display: flex;
     border-bottom: 1px dashed #cdcdcd;
+    margin-bottom: 2rem;
 }
 .join_deal_main .top_flex .left{
     width: 90%;
+}
+.join_deal_main h4{
+    color: #313131;
+     font-size: 25px;
+     margin-top: 2rem;
+     font-weight: 500;
 }
 .join_deal_main .top_flex .right{
     width: 10%;
 }
 .join_deal_main .top_flex .left h3{
-     color: #ff6a00;
-     font-size: 25px;
+     color: #313131;
+     font-size: 30px;
      font-weight: 500;
 }
 .join_deal_main .top_flex .left p{
@@ -38,23 +45,24 @@
     font-weight: 400;
 }
 .join_deal_main .top_text i{
-    font-size: 25px !important;
+    font-size: 20px !important;
     margin-right: .5rem;
+    color: #414040 !important;
 }
 .join_deal_main .jopin{
      color: #ff6a00;
      font-size: 25px;
      font-weight: 500;
 }
-.join_deal_main .right_form{
+ .right_form{
     width: 100%;
     height: auto;
     background-color: white;
-    padding: 1rem;
+    padding: 2rem;
     border-radius: 25px;
     box-shadow: 0px 4px 9px 0px #d3d4d6;
 }
-.join_deal_main .right_form input[type="text"],input[type="email"],input[type="number"],textarea{
+ .right_form input[type="text"],input[type="email"],input[type="number"],textarea{
     width: 100%;
     height: auto;
     padding: .5rem 1rem;
@@ -62,13 +70,26 @@
     outline: none;
     margin-bottom: 1rem;
 }
-.join_deal_main .right_form button{
+ .right_form button,.joib{
     width: 100%;
     height: auto;
     padding: .5rem;
     color: white;
-    background-color: #00a9ea;
+    background-color :#20bf55;
+    background-image :linear-gradient(315deg, #20bf55 0%, #01baef 74%);
     border: none;
     outline: none;
     
+}
+.main_form_foot{
+    width: 100%;
+    height: auto;
+    padding: 2rem 0rem;
+    background-color: white;
+}
+.main_form_foot h3{
+    color: #313131;
+     font-size: 30px;
+     margin-top: 2rem;
+     font-weight: 500;
 }
