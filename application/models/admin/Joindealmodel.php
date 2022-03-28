@@ -94,5 +94,16 @@ class Joindealmodel extends CI_Model
         return array('message' => 'no');
       }
     }
+    public function deletejaindealdata($data)
+    {
+      $explodData = explode(',', $data);
+      $this->db->where_in('id', $explodData);
+      $getDeleteStatus = $this->db->delete('join_deal_query');
+      if ($getDeleteStatus == 1) {
+        return array('message' => 'yes');
+      } else {
+        return array('message' => 'no');
+      }
+    }
    
 }

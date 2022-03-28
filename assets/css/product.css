@@ -1,0 +1,93 @@
+.product_main_top{
+    width: 100%;
+    height: auto;
+    padding: 4rem 0rem;
+    background-color: #ffffff;
+}
+.product_main_top .flex{
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+.product_main_top .flex .card_main{
+    width: 100%;
+    height: auto;
+}
+.product_main_top .flex .card_main img{
+    width: 100%;
+}
+.product_main_top .fleag{
+    width: 30px;
+}
+.product_main_top button{
+    width: 100%;
+    height: auto;
+    padding: .5rem;
+    background-color: #00a9ea;
+    color: white;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.nav-pills-custom .nav-link {
+color: #aaa;
+background: #fff;
+position: relative;
+}
+
+.nav-pills-custom .nav-link.active {
+color: #45b649;
+background: #fff;
+}
+
+
+/* Add indicator arrow for the active tab */
+@media (min-width: 992px) {
+.nav-pills-custom .nav-link::before {
+content: '';
+display: block;
+border-top: 8px solid transparent;
+border-left: 10px solid #fff;
+border-bottom: 8px solid transparent;
+position: absolute;
+top: 50%;
+right: -10px;
+transform: translateY(-50%);
+opacity: 0;
+}
+}
+
+.nav-pills-custom .nav-link.active::before {
+opacity: 1;
+}
+
+
+
+.product_form{
+width: 100%;
+height: auto;
+padding: 4rem 0rem;
+background-color: white;
+}
+.product_form input[type="email"],input[type="number"],input[type="text"],select,textarea{
+width: 100%;
+height: auto;
+padding: .5rem 1rem;
+border: 1px solid #cdcdcd;
+outline: none;
+background-color: white !important;
+margin-bottom: 1rem;
+}
+.product_form button{
+width: 100%;
+    height: auto;
+    padding: .5rem;
+    background-color: #00a9ea;
+    color: white;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+}

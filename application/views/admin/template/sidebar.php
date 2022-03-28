@@ -170,6 +170,9 @@ $parts = basename($url);
         <li class="nav-item <?php echo ($parts == 'exportdata') ? "active" : "" ?>">
           <a class="nav-link " href="<?php echo base_url(); ?>admin/exportdata"><i class="fas fa-fw fa-table"></i><span>Export Data</span></a>
         </li>
+        <li class="nav-item <?php echo ($parts == 'joindealdata') ? "active" : "" ?>">
+          <a class="nav-link " href="<?php echo base_url(); ?>admin/joindealdata"><i class="fas fa-fw fa-table"></i><span>Join Deal Data</span></a>
+        </li>
         <hr class="sidebar-divider">
 
         <!-- Sidebar Toggler (Sidebar) -->

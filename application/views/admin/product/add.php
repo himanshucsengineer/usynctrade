@@ -81,6 +81,13 @@
                 <div class="col-md-12">
                     <div class="box">
                         <div class="row">
+                            <div class="col-md-12">
+                                <label>Product main_image</label>
+                                <input type="file" name="images" id="" required>
+                            </div>
+                    
+                        </div>
+                        <div class="row">
                             <div class="col-md-6">
                                 <label>Product Name</label>
                                 <input type="text" name="name" placeholder="Enter Product Name" required>
@@ -112,22 +119,22 @@
                         </div>
                         <div class="row">
                             <div class="col-md-6">
-                                <label>Chances Of Negotiation</label>
-                                <input type="text" name="negotiation" placeholder="Enter Chances Of Negotiation" required>
+                                <label>Incoterms (FOB)</label>
+                                <input type="text" name="fob_price" placeholder="Enter Fob Price" required>
                             </div>
                             <div class="col-md-6">
-                                <label>Respons Time</label>
-                                <input type="text" name="response_time" placeholder="Enter Respons Time" required>
+                                <label>Incoterms (CIF)</label>
+                                <input type="text" name="cif_price" placeholder="Enter CIF price" required>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6">
-                                <label>Certificate</label>
-                                <input type="text" name="certificate" placeholder="Enter Certificate" required>
+                                <label>Incoterms (CFR)</label>
+                                <input type="text" name="cfr_price" placeholder="Enter Cfr Price" required>
                             </div>
                             <div class="col-md-6">
-                                <label>Selling Units</label>
-                                <input type="text" name="selling_units" placeholder="Selling Units" required>
+                                <label>Incoterms (DAP)</label>
+                                <input type="text" name="dap_price" placeholder="Enter DAP price" required>
                             </div>
                         </div>
                         <div class="row">
@@ -136,33 +143,147 @@
                                 <input type="text" name="brand_name" placeholder="Enter Brand Name" required>
                             </div>
                             <div class="col-md-6">
-                                <label>Product Size</label>
-                                <input type="text" name="product_size" placeholder="Product Sizer" required>
+                                <label>Place of origin</label>
+                                <select name="origin_place" id="">
+                                    <option value="">Select Country</option>
+                                    <?php foreach($country as $value){?>
+                                        <option value="<?php echo $value['Country']?>"><?php echo $value['Country']?></option>
+                                    <?php }?>
+                                </select>
+                                
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6">
-                                <label>Product Name</label>
-                                <input type="text" name="name" placeholder="Enter Product Name" required>
+                                <label>Category</label>
+                                <input type="text" name="category" placeholder="Enter Category Name" required>
                             </div>
                             <div class="col-md-6">
-                                <label>Product Size</label>
-                                <input type="text" name="product_size" placeholder="Product Sizer" required>
+                                <label>Certificates</label>
+                                <input type="text" name="certificates" placeholder="Certificates" required>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6">
-                                <label>Product Name</label>
-                                <input type="text" name="name" placeholder="Enter Product Name" required>
+                                <label>Looking Buyer From</label>
+                                <input type="text" name="buyer_from" placeholder="Enter Byuer From" required>
                             </div>
                             <div class="col-md-6">
-                                <label>Product Size</label>
-                                <input type="text" name="product_size" placeholder="Product Sizer" required>
+                                <label>Successfull Transation</label>
+                                <input type="text" name="transaction" placeholder="Enter Transaction" required>
                             </div>
                         </div>
-                        
-                        
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Selling Units</label>
+                                <input type="text" name="selling_units" placeholder="Enter Selling units" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label>Single Gross Weight</label>
+                                <input type="text" name="single_gross_weight" placeholder="Enter single gross weight" required>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Single Package Size</label>
+                                <input type="text" name="single_package_size" placeholder="Enter Byuer From" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label>Package Type</label>
+                                <input type="text" name="single_package_type" placeholder="Enter Package Type" required>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label>Product Description</label>
+                                <textarea name="product_desc" id="" cols="30" rows="5" required></textarea>
+                            </div>
+                            
+                        </div>
                        
+                        <h1>Company Profile</h1>
+                        <!-- <div class="row">
+                            <div class="col-md-12">
+                                <label for="">Company Images</label>
+                                <input type="file" name="comapny_images" id="" required>
+                            </div>
+                        </div> -->
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="">Company Name</label>
+                                <input type="text" name="comapny_name" placeholder="Enter Comapny Name" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="">Select Country</label>
+                                <select name="company_country" id="">
+                                    <option value="">Select Country</option>
+                                    <?php foreach($country as $value){?>
+                                        <option value="<?php echo $value['Country']?>"><?php echo $value['Country']?></option>
+                                    <?php }?>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="">Business Type</label>
+                                <input type="text" placeholder="Enter Business Type" name="business_type" required>
+                            </div>
+                            <div class="col-md-6">
+                            <label for="">Year Of Stablised</label>
+                                <input type="text" placeholder="Enter Stablished  year" name="stablished_year" required>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="">Main Product</label>
+                                <input type="text" placeholder="Enter Main Product" name="main_product" required>
+                            </div>
+                            <div class="col-md-6">
+                            <label for="">Factory Size</label>
+                                <input type="text" placeholder="Enter Factory Size" name="factory_size" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="">No. Of Offices</label>
+                                <input type="text" placeholder="Enter No. Of Offices" name="no_of_office" required>
+                            </div>
+                            <div class="col-md-6">
+                            <label for="">Certificates</label>
+                                <input type="text" placeholder="Enter Certificates" name="comapny_certificates" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="">Total Emplyees</label>
+                                <input type="text" placeholder="Enter Total Employee" name="total_employee" required>
+                            </div>
+                            <div class="col-md-6">
+                            <label for="">Response Time</label>
+                                <input type="text" placeholder="Enter Response Time" name="response_time" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="">Orgenization Membership</label>
+                                <input type="text" placeholder="Enter orgenization Membership" name="membership" required>
+                            </div>
+                            <div class="col-md-6">
+                            <label for="">Annual Revenue</label>
+                                <input type="text" placeholder="Enter Annual Revenue" name="annual_revenue" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label for="">Contract Services</label>
+                                <input type="text" placeholder="Enter Contract Services" name="contract_services" required>
+                            </div>
+                            
+                        </div>
                         <button name="formSubmit">Add</button>
                     </div>
                 </div>
