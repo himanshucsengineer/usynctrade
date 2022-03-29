@@ -129,7 +129,7 @@
                         </div>
                         <div class="row">
                             <div class="col-md-6">
-                                <label>Incoterms (CFR)</label>
+                                <label>Incoterms (Cfr)</label>
                                 <input type="text" name="cfr_price" placeholder="Enter Cfr Price" required>
                             </div>
                             <div class="col-md-6">
@@ -156,7 +156,13 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <label>Category</label>
-                                <input type="text" name="category" placeholder="Enter Category Name" required>
+                                <select name="category" id="" required>
+                                    <option value="">Select Category</option>
+                                    <?php foreach($fetch_category as $cate){?>
+                                        <option value="<?php echo $cate['cate_name']?>"><?php echo $cate['cate_name']?></option>
+                                    <?php }?>
+                                </select>
+                                
                             </div>
                             <div class="col-md-6">
                                 <label>Certificates</label>

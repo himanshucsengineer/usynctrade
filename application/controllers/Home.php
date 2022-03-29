@@ -55,7 +55,7 @@ class Home extends CI_controller
                         <select class="infoterm_select">
                             <option>Fob Price '.$row->fob_price.'</option>
                             <option>Cif Price '.$row->cif_price.'</option>
-                            <option>Crf Price '.$row->cfr_price.'</option>
+                            <option>Cfr Price '.$row->cfr_price.'</option>
                             <option>Dap Price '.$row->dap_price.'</option>
                             
                         </select>

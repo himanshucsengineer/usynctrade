@@ -14,7 +14,7 @@ class Add extends CI_controller
   public function index()
   { 
 
-    
+    $data['fetch_category']=$this->productmodel->fetch_category();
     $data['country']=$this->productmodel->fetch_country();
     $this->load->view('admin/template/header');
     $this->load->view('admin/template/sidebar');

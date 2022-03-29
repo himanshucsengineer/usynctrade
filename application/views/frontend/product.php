@@ -12,6 +12,18 @@
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <?php $this->load->view('frontend/template/navbar')?>
 
+<?php 
+    if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'ON'){
+        $url = "https://";
+    }else{
+        $url = "http://";
+    }
+    $url.= $_SERVER['HTTP_HOST'];
+    $url.= $_SERVER['REQUEST_URI'];
+    $parts = basename($url);
+?>
+
+<?php foreach($product_details as $value){if($value['id'] == $parts){?>
 <div class="product_main_top">
        <div class="container">
            <div class="row">
@@ -41,34 +53,36 @@
                     </div>
                 </div>
                 <div class="col-md-8">
-                    <p class="product_name">Indian Red Onion, Indian White Onion,</p>
+                    
                     <div class="row">
                         <div class="col-md-6">
+                            <p class="procudt_details"><?php echo $value['name']?></p>
+                            <p class="procudt_details">Size - <?php echo $value['product_size']?></p>
+                            <p class="procudt_details">Time To Dispatch - <?php echo $value['dispetch_time']?></p>
+                            <p class="procudt_details">MOQ - <?php echo $value['moq']?></p>
+                            <p class="procudt_details">Port Of Shipment - <?php echo $value['shipment_port']?></p>
+                            <p class="procudt_details">Payment Terms - <?php echo $value['payment_terms']?></p>
                             
-                            <p class="procudt_details">Size - 3cm - 5cm , 5cm - 7cm</p>
-                            <p class="procudt_details">Time To Dispatch - 1 Week - 2Week</p>
-                            <p class="procudt_details">MOQ - 2Tons</p>
-                            <p class="procudt_details">Port Of Shipment - Mundra Port, India</p>
-                            <p class="procudt_details">Payment Terms - LC, T/T, Bank Transfer</p>
-                            <p class="procudt_details">Chances Of Negotiation - Yes</p>
-                            <p class="procudt_details">UsyncTrade Verified</p>
-                            <p class="procudt_details">Source Of Origin</p>
                         </div>
                         <div class="col-md-6">
-                            <p class="procudt_details">Respons Time < 24 hrs</p>
-                            <p class="procudt_details">Certificate- Source Of Origin</p>
-                            <p class="procudt_details"><img class="fleag" src="assets/img/flag.jpg"></p>
-                            <p class="procudt_details">Exporter</p>
-                            <p class="procudt_details">UsyncTrade Verified</p>
-                            <p class="procudt_details">Transaction- 23</p>
-                            <p class="procudt_details">Organisation Mem.</p>
-                            <input type="checkbox" name="" id=""> Trade Assistance
+                            <p class="procudt_details">brand Name : <?php echo $value['brand_name']?></p>
+                            <p class="procudt_details">Place Of Origin : <?php echo $value['origin_place']?></p>
+                            <p class="procudt_details">Category : <?php echo $value['category']?></p>
+                            <p class="procudt_details">Certificates : <?php echo $value['certificates']?></p>
+                            <p class="procudt_details">Looking Buyer From : <?php echo $value['buyer_from']?></p>
+                            <p class="procudt_details">Successfull Transaction : <?php echo $value['transaction']?></p>
+                            
                         </div>
                         
                     </div>
                     <div class="row">
                         <div class="col-md-6">
-                            <button>FOB 0.4 US$/Piece</button>
+                            <select name="" id="">
+                                <option value="">FOB PRICE : <?php echo $value['fob_price']?></option>
+                                <option value="">CIF PRICE : <?php echo $value['cif_price']?></option>
+                                <option value="">CFR PRICE : <?php echo $value['cfr_price']?></option>
+                                <option value="">DAP PRICE : <?php echo $value['dap_price']?></option>
+                            </select>
                         </div>
                         <div class="col-md-6">
                             <button>Send your message to this supplier</button>
@@ -89,11 +103,11 @@
                 <div class="nav flex-column nav-pills nav-pills-custom" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                     <a class="nav-link mb-3 p-3 shadow active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">
                         <i class="fa fa-user-circle-o mr-2"></i>
-                        <span class="font-weight-bold small text-uppercase">Personal information</span></a>
+                        <span class="font-weight-bold small text-uppercase">Product Details</span></a>
 
                     <a class="nav-link mb-3 p-3 shadow" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">
                         <i class="fa fa-calendar-minus-o mr-2"></i>
-                        <span class="font-weight-bold small text-uppercase">Bookings</span></a>
+                        <span class="font-weight-bold small text-uppercase">Company Profile</span></a>
 
                     
                     </div>
@@ -104,13 +118,43 @@
                 <!-- Tabs content -->
                 <div class="tab-content" id="v-pills-tabContent">
                     <div class="tab-pane fade shadow rounded bg-white show active p-5" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
-                        <h4 class="font-italic mb-4">Personal information</h4>
-                        <p class="font-italic text-muted mb-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <h4 class=" mb-4">Product Description :</h4>
+                        <p class=" text-muted mb-4"><?php echo $value['product_desc']?></p>
+                        <h4 class=" mb-4">Packaging Details :</h4>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p class=" text-muted mb-2">1. Selling units : <?php echo $value['selling_units']?></p>
+                                <p class=" text-muted mb-2">2. Single Gross Weight : <?php echo $value['single_gross_weight']?></p>
+                            </div>
+                            <div class="col-md-6">
+                                <p class=" text-muted mb-2">3. Single Package Size : <?php echo $value['single_package_size']?></p>
+                                <p class=" text-muted mb-2">4. Package Type : <?php echo $value['single_package_type']?></p>
+                            </div>
+                        </div>
                     </div>
                     
                     <div class="tab-pane fade shadow rounded bg-white p-5" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
-                        <h4 class="font-italic mb-4">Bookings</h4>
-                        <p class="font-italic text-muted mb-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <h4 class=" mb-4">Verfied</h4>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p class=" text-muted mb-2">1. Cpmpany Name : <?php echo $value['comapny_name']?></p>
+                                <p class=" text-muted mb-2">3. Business Type : <?php echo $value['business_type']?></p>
+                                <p class=" text-muted mb-2">5. Main Products : <?php echo $value['main_product']?></p>
+                                <p class=" text-muted mb-2">7. No. Of Offices : <?php echo $value['no_of_office']?></p>
+                                <p class=" text-muted mb-2">9. Total Employee : <?php echo $value['total_employee']?></p>
+                                <p class=" text-muted mb-2">11. Orgenisation Membership : <?php echo $value['membership']?></p>
+                            </div>
+                            <div class="col-md-6">
+                                <p class=" text-muted mb-2">2. Country : <?php echo $value['company_country']?></p>
+                                <p class=" text-muted mb-2">4. Year Of Established : <?php echo $value['stablished_year']?></p>
+                                <p class=" text-muted mb-2">6. Factory Size : <?php echo $value['factory_size']?></p>
+                                <p class=" text-muted mb-2">8. Certificates : <?php echo $value['comapny_certificates']?></p>
+                                <p class=" text-muted mb-2">10. Response Time : <?php echo $value['response_time']?></p>
+                                <p class=" text-muted mb-2">12. Total Annual Revenue : <?php echo $value['annual_revenue']?></p>
+                                <p class=" text-muted mb-2">13. Contract Services : <?php echo $value['contract_services']?></p>
+                            </div>
+                        </div>
+                        
                     </div>
                     
                     
@@ -119,41 +163,60 @@
         </div>
     </div>
 </section>
-
+<?php }}?>
 
 <div class="product_form">
     <div class="container">
         <h3>Send your message to suplier</h3>
         <form action="" method="post">
-        <div class="row">
-            <div class="col-md-6">
-                <input type="text" placeholder="Enter Quantity">
-                <select name="" id="">
-                    <option value="">Select Pieces</option>
-                    <option value="">Pieces</option>
-                    <option value="">Cartoon</option>
-                </select>
-                <input type="text" name="" placeholder="Enter budget">
-                <select name="" id="">
-                    <option value="">Select Currency</option>
-                    <option value="">Inr</option>
-                    <option value="">UD$</option>
-                </select>
-                <textarea name="" id="" cols="30" rows="2">Enter Message</textarea>
+            <div class="row">
+                <div class="col-md-6">
+                    <input type="text" placeholder="Enter Quantity">
+                </div>
+                <div class="col-md-6">
+                    <select name="" id="">
+                        <option value="">Select Pieces</option>
+                        <option value="">Pieces</option>
+                        <option value="">Cartoon</option>
+                    </select>
+                </div>
             </div>
-            <div class="col-md-6">
-                <input type="text" placeholder="Enter Name">
-                <input type="number" placeholder="Enter Number">
-                <input type="email" placeholder="Enter Email">
-                <select name="" id="">
-                    <option value="">Select Dest. Country</option>
-                    <option value="">1</option>
-                    <option value="">2</option>
-                    <option value="">3</option>
-                </select>
-                <button>SUBMIT DEATILS</button>
+            <div class="row">
+                <div class="col-md-6">
+                    <select name="" id="">
+                        <option value="">Select Incoterms</option>
+                        <option value="FOB">FOB</option>
+                        <option value="CIF">CIF</option>
+                        <option value="CFR">CFR</option>
+                        <option value="DAP">DAP</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <select name="" id="">
+                        <option value="">Select Destination Country</option>
+                     
+                    </select>
+                </div>
             </div>
-        </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <input type="text" placeholder="Enter Your Budget">
+                </div>
+                <div class="col-md-6">
+                    <select name="" id="">
+                        <option value="">Select Currency</option>
+                        <option value="INR">Inr</option>
+                        <option value="USD">USD</option>
+                     
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <textarea name="" id="" cols="30" rows="5" placeholder="Your Message..."></textarea>
+                </div>
+            </div>
+     
         </form>
     </div>
 </div>
