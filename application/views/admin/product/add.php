@@ -29,7 +29,7 @@
     .new-post input[type="text"],
     input[type="file"],input[type="number"],input[type="email"],
     select,
-    textarea {
+    textarea, .uinpuuu {
         width: 100%;
         height: auto;
         padding-top: .5rem;
@@ -81,9 +81,18 @@
                 <div class="col-md-12">
                     <div class="box">
                         <div class="row">
-                            <div class="col-md-12">
+                            <div class="col-md-6">
                                 <label>Product main_image</label>
                                 <input type="file" name="images" id="" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="">Select User</label>
+                                <input list="browsers" class="uinpuuu" name="user_email" id="browser" placeholder="Please Select User Email">
+                                <datalist id="browsers">
+                                    <?php foreach($fetch_users as $value){?>
+                                        <option value="<?php echo $value['email']?>">
+                                    <?php }?>
+                                </datalist>
                             </div>
                     
                         </div>
@@ -109,8 +118,23 @@
                         </div>
                         <div class="row">
                             <div class="col-md-6">
-                                <label>Port Of Shipment</label>
-                                <input type="text" name="shipment_port" placeholder="Enter Port Of Shipment" required>
+                                
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>Port Of Shipment(Address)</label>
+                                        <input type="text" name="shipment_port" placeholder="Enter Port Of Shipment" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label>Port Of Shipment (Country)</label>
+                                        
+                                        <select name="shipment_country" id="">
+                                            <option value="">Select Country</option>
+                                            <?php foreach($country as $value){?>
+                                                <option value="<?php echo $value['Country']?>"><?php echo $value['Country']?></option>
+                                            <?php }?>
+                                        </select>
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-md-6">
                                 <label>Payment Terms</label>
@@ -171,8 +195,46 @@
                         </div>
                         <div class="row">
                             <div class="col-md-6">
-                                <label>Looking Buyer From</label>
-                                <input type="text" name="buyer_from" placeholder="Enter Byuer From" required>
+                                 
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <label>Buyer From 1</label>
+                                        <select name="buyer_from" id="">
+                                            <option value="">Select Country</option>
+                                            <?php foreach($country as $value){?>
+                                                <option value="<?php echo $value['Country']?>"><?php echo $value['Country']?></option>
+                                            <?php }?>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label>Buyer From 2</label>
+                                        <select name="buyer_from2" id="">
+                                            <option value="">Select Country</option>
+                                            <?php foreach($country as $value){?>
+                                                <option value="<?php echo $value['Country']?>"><?php echo $value['Country']?></option>
+                                            <?php }?>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label>Buyer From 3</label>
+                                        <select name="buyer_from3" id="">
+                                            <option value="">Select Country</option>
+                                            <?php foreach($country as $value){?>
+                                                <option value="<?php echo $value['Country']?>"><?php echo $value['Country']?></option>
+                                            <?php }?>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label>Buyer From 4</label>
+                                        <select name="buyer_from4" id="">
+                                            <option value="">Select Country</option>
+                                            <?php foreach($country as $value){?>
+                                                <option value="<?php echo $value['Country']?>"><?php echo $value['Country']?></option>
+                                            <?php }?>
+                                        </select>
+                                    </div>
+                                </div>
+                            
                             </div>
                             <div class="col-md-6">
                                 <label>Successfull Transation</label>

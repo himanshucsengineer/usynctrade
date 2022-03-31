@@ -61,6 +61,7 @@ $route['sez_industry'] = 'frontend/industry';
 $route['i-trade'] = 'frontend/itrade';
 $route['import'] = 'frontend/import';
 $route['export'] = 'frontend/export';
+$route['search'] = 'frontend/search';
 $route['user/dashboard'] = 'frontend/user/dashboard';
 $route['user/joindeal'] = 'frontend/user/joindeal';
 $route['product/(:any)'] = 'frontend/product/index/$i';

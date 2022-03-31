@@ -17,6 +17,11 @@ class Productmodel extends CI_Model
       return $this->db->get('product_cate')->result_array();
     }
 
+    public function fetch_users()
+    {
+      return $this->db->get('user')->result_array();
+    }
+
     function filter_basesd_country($limit, $start, $country){
       $this->db->select("*");
       $this->db->from("product");
@@ -27,6 +32,28 @@ class Productmodel extends CI_Model
       $query = $this->db->get();
       return $query;
   }
+  function filter_basesd_product($limit, $start, $product){
+    $this->db->select("*");
+    $this->db->from("product");
+  
+    $this->db->where("name LIKE '%$product%'");
+    $this->db->order_by("id", "DESC");
+    $this->db->limit($limit, $start);
+    $query = $this->db->get();
+    return $query;
+}
+function filter_basesd_on_both($limit, $start, $country,$product){
+  $array = array('origin_place' => $country, 'name' => $product);
+  $this->db->select("*");
+  $this->db->from("product");
+
+  $this->db->like($array);
+  $this->db->order_by("id", "DESC");
+  $this->db->limit($limit, $start);
+  $query = $this->db->get();
+  return $query;
+  
+}
   function fetch_all_data($limit, $start)
   {
       $this->db->select("*");

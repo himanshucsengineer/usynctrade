@@ -22,7 +22,11 @@
     $url.= $_SERVER['REQUEST_URI'];
     $parts = basename($url);
 ?>
-
+<style>
+.conty_flag{
+    width:25px;
+}
+</style>
 <?php foreach($product_details as $value){if($value['id'] == $parts){?>
 <div class="product_main_top">
        <div class="container">
@@ -60,7 +64,7 @@
                             <p class="procudt_details">Size - <?php echo $value['product_size']?></p>
                             <p class="procudt_details">Time To Dispatch - <?php echo $value['dispetch_time']?></p>
                             <p class="procudt_details">MOQ - <?php echo $value['moq']?></p>
-                            <p class="procudt_details">Port Of Shipment - <?php echo $value['shipment_port']?></p>
+                            <p class="procudt_details">Port Of Shipment - <?php echo $value['shipment_port']?>, <?php foreach($country as $valll){if($valll['Country']==$value['shipment_country']){echo '<img class="conty_flag" src="'.$valll['Flag_image_url'].'">';}}?></p>
                             <p class="procudt_details">Payment Terms - <?php echo $value['payment_terms']?></p>
                             
                         </div>
@@ -69,7 +73,7 @@
                             <p class="procudt_details">Place Of Origin : <?php echo $value['origin_place']?></p>
                             <p class="procudt_details">Category : <?php echo $value['category']?></p>
                             <p class="procudt_details">Certificates : <?php echo $value['certificates']?></p>
-                            <p class="procudt_details">Looking Buyer From : <?php echo $value['buyer_from']?></p>
+                            <p class="procudt_details">Looking Buyer From : <?php foreach($country as $valll){if($valll['Country']==$value['buyer_from']){echo '<img class="conty_flag" src="'.$valll['Flag_image_url'].'">';}}?> <?php foreach($country as $valll){if($valll['Country']==$value['buyer_from2']){echo '<img class="conty_flag" src="'.$valll['Flag_image_url'].'">';}}?> <?php foreach($country as $valll){if($valll['Country']==$value['buyer_from3']){echo '<img class="conty_flag" src="'.$valll['Flag_image_url'].'">';}}?> <?php foreach($country as $valll){if($valll['Country']==$value['buyer_from4']){echo '<img class="conty_flag" src="'.$valll['Flag_image_url'].'">';}}?></p>
                             <p class="procudt_details">Successfull Transaction : <?php echo $value['transaction']?></p>
                             
                         </div>
@@ -78,10 +82,10 @@
                     <div class="row">
                         <div class="col-md-6">
                             <select name="" id="">
-                                <option value="">FOB PRICE : <?php echo $value['fob_price']?></option>
-                                <option value="">CIF PRICE : <?php echo $value['cif_price']?></option>
-                                <option value="">CFR PRICE : <?php echo $value['cfr_price']?></option>
-                                <option value="">DAP PRICE : <?php echo $value['dap_price']?></option>
+                                <option value="">FOB PRICE : <?php echo $value['fob_price']?> INR</option>
+                                <option value="">CIF PRICE : <?php echo $value['cif_price']?> INR</option>
+                                <option value="">CFR PRICE : <?php echo $value['cfr_price']?> INR</option>
+                                <option value="">DAP PRICE : <?php echo $value['dap_price']?> INR</option>
                             </select>
                         </div>
                         <div class="col-md-6">

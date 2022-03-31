@@ -295,14 +295,16 @@
                                         <a href="" class="nav-link">Category</a>
                                     </li>
                                     <li class=" nav-item">
+                                    <form action="<?php echo base_url()?>frontend/search/fetch_product" method="post">
                                         <div class="serach_flex_nav">
                                             <div class="left">
-                                                <input type="text" name="" placeholder="Search Your Product">
+                                                <input type="text" id="products" name="product" placeholder="Search Your Product" value="<?php echo $_SESSION['product']?>">
                                             </div>
                                             <div class="right">
                                                 <button class="search">Search</button>
                                             </div>
                                         </div>
+                                    </form>
                                     </li>
                                     <?php echo $login?>
                                 </ul>

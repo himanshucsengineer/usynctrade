@@ -13,7 +13,7 @@ class Add extends CI_controller
 
   public function index()
   { 
-
+    $data['fetch_users']=$this->productmodel->fetch_users();
     $data['fetch_category']=$this->productmodel->fetch_category();
     $data['country']=$this->productmodel->fetch_country();
     $this->load->view('admin/template/header');
@@ -67,6 +67,13 @@ class Add extends CI_controller
       $this->form_validation->set_rules('annual_revenue', 'link', 'required');
       $this->form_validation->set_rules('contract_services', 'state', 'required');
     
+
+      $this->form_validation->set_rules('user_email', 'Name', 'required');
+      $this->form_validation->set_rules('shipment_country', 'product size', 'required');
+      $this->form_validation->set_rules('buyer_from2', 'dispetch time', 'required');
+      $this->form_validation->set_rules('buyer_from3', 'state', 'required');
+      $this->form_validation->set_rules('buyer_from4', 'shipment_port', 'required');
+      
      
       if ($this->form_validation->run()) {
         if (!empty($_FILES['images']['name'])) {
@@ -135,6 +142,12 @@ class Add extends CI_controller
                   'membership' =>$this->input->post('membership'),
                   'annual_revenue' =>$this->input->post('annual_revenue'),
                   'contract_services' =>$this->input->post('contract_services'),
+
+                  'user_email' =>$this->input->post('user_email'),
+                  'shipment_country' =>$this->input->post('shipment_country'),
+                  'buyer_from2' =>$this->input->post('buyer_from2'),
+                  'buyer_from3' =>$this->input->post('buyer_from3'),
+                  'buyer_from4' =>$this->input->post('buyer_from4'),
 
                   
                   

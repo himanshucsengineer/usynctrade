@@ -24,13 +24,20 @@ class Home extends CI_controller
         $output = '';
         $this->load->model('admin/productmodel');
         $country=$this->joindealmodel->fetch_country();
-        if(!empty($this->input->post('country'))){
-	       $country =  $this->input->post('country');
-	       $data = $this->productmodel->filter_basesd_country($this->input->post('limit'), $this->input->post('start'), $country);
-	    }else{
-	       $data = $this->productmodel->fetch_all_data($this->input->post('limit'), $this->input->post('start'));
-	    }
         
+        if(empty($this->input->post('country')) && !empty($this->input->post('product'))){
+            $product =  $this->input->post('product');
+            $data = $this->productmodel->filter_basesd_product($this->input->post('limit'), $this->input->post('start'), $product);
+        }elseif(!empty($this->input->post('country')) && empty($this->input->post('product'))){
+             $country= $this->input->post('country');
+            $data = $this->productmodel->filter_basesd_country($this->input->post('limit'), $this->input->post('start'), $country);
+        }elseif(!empty($this->input->post('country')) && !empty($this->input->post('product'))){
+            $country= $this->input->post('country');
+            $product =  $this->input->post('product');
+            $data = $this->productmodel->filter_basesd_on_both($this->input->post('limit'), $this->input->post('start'), $country, $product);
+        }else{
+            $data = $this->productmodel->fetch_all_data($this->input->post('limit'), $this->input->post('start'));
+        }
         if($data->num_rows() > 0)
         {
             foreach($data->result() as $row)
@@ -53,10 +60,10 @@ class Home extends CI_controller
                             </div>
                         </div>
                         <select class="infoterm_select">
-                            <option>Fob Price '.$row->fob_price.'</option>
-                            <option>Cif Price '.$row->cif_price.'</option>
-                            <option>Cfr Price '.$row->cfr_price.'</option>
-                            <option>Dap Price '.$row->dap_price.'</option>
+                            <option>Fob Price '.$row->fob_price.' INR</option>
+                            <option>Cif Price '.$row->cif_price.' INR</option>
+                            <option>Cfr Price '.$row->cfr_price.' INR</option>
+                            <option>Dap Price '.$row->dap_price.' INR</option>
                             
                         </select>
                     </div>
