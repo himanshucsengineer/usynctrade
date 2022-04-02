@@ -136,6 +136,20 @@ $parts = basename($url);
             </div>
           </div>
         </li>
+        <li class="nav-item ">
+          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#itrade" aria-expanded="true" aria-controls="collapsePages">
+            <i class="fas fa-fw fa-folder"></i>
+            <span>I-Trade Update</span>
+          </a>
+          <div id="itrade" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+            <div class="py-2 collapse-inner rounded">
+              <a class="collapse-item " href="<?php echo base_url(); ?>admin/itrade/add" style="font-size:1.3rem; ">Add i-trade update</a>
+              <a class="collapse-item " href="<?php echo base_url(); ?>admin/itrade/view" style="font-size:1.3rem; ">View All i-trade update</a>
+              
+              <div class="collapse-divider"></div>
+            </div>
+          </div>
+        </li>
 
         <li class="nav-item ">
           <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePagesss" aria-expanded="true" aria-controls="collapsePages">

@@ -10,10 +10,10 @@ class Itrade extends CI_controller
     {
 
 
-        //$this->load->view('frontend/template/header');
+        $this->load->view('frontend/template/header');
       //  $this->load->view('frontend/template/navbar');
 
         $this->load->view('frontend/Itrade');
-        //$this->load->view('frontend/template/footer');
+        $this->load->view('frontend/template/footer');
     }
 }
