@@ -15,7 +15,7 @@ class Add extends CI_controller
   public function index()
   { 
 
-    
+     
     $data['country']=$this->joindealmodel->fetch_country();
     $this->load->view('admin/template/header');
     $this->load->view('admin/template/sidebar');
@@ -299,6 +299,17 @@ if (!empty($_FILES['today_import']['name'])) {
                   'cost_import' => $cost_import,
                   'today_export' => $today_export,
                   'today_import' => $today_import,
+
+                  'news_export_name' =>$this->input->post('news_export_name'),
+                  'news_import_name' =>$this->input->post('news_import_name'),
+                  'duty_export_name' =>$this->input->post('duty_export_name'),
+                  'duty_import_name' =>$this->input->post('duty_import_name'),
+                  'statics_export_name' =>$this->input->post('statics_export_name'),
+                  'statics_import_name' =>$this->input->post('statics_import_name'),
+                  'cost_export_name' => $this->input->post('cost_export_name'),
+                  'cost_import_name' => $this->input->post('cost_import_name'),
+                  'today_export_name' => $this->input->post('today_export_name'),
+                  'today_import_name' => $this->input->post('today_import_name'),
               );
               if ($this->itrademodel->insert_data($data)) {
 

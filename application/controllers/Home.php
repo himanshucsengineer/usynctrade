@@ -42,11 +42,7 @@ class Home extends CI_controller
         {
             foreach($data->result() as $row)
             {   
-                foreach($country as $counteee){
-                    if($counteee['Country'] ==  $row->origin_place){
-                        $country_fleg = $counteee['Flag_image_url'];
-                    }
-                }
+                
                 $output .= '<div class="home_product_card">
                 <div class="main_card">
                     <a href="'.base_url().'product/'.$row->id.'"><img class="main_image" src="'.base_url().'upload/product/'.$row->main_image.'" alt=""></a>
@@ -56,7 +52,8 @@ class Home extends CI_controller
                             <a href="'.base_url().'product/'.$row->id.'"> <p>'.$row->name.'</p></a>
                             </div>
                             <div class="right">
-                                <img src="'.$country_fleg.'" alt="">
+                           
+                                <img src="'.$row->country_fleg.'" alt="">
                             </div>
                         </div>
                         <select class="infoterm_select">

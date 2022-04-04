@@ -41,7 +41,37 @@
                                     value="<?php echo $value["email"]?>" readonly>
                                 <input class="inpu" type="number" name="number" placeholder="Mobile Number"
                                     value="<?php echo $value["number"]?>">
-                                <textarea name="address" id="" class="inpu" cols="30" rows="5" placeholder="your address"><?php echo $value["address"]?></textarea>
+                                <input type="text" placeholder="address" name="address" class="inpu" value="<?php echo $value["address"]?>">
+                                <input type="text" placeholder="city" name="city" class="inpu" value="<?php echo $value["city"]?>">
+                                <input type="text" placeholder="state" name="state" class="inpu" value="<?php echo $value["state"]?>">
+                                <select name="country" class="inpu" id="">
+                                    <option value="">Please Select Country</option>
+                                    <?php foreach($country as $val){?>
+                                        <option value="<?php echo $val['Country']?>" <?php if($val['Country'] == $value["country"]){echo "selected";}else{"";}?>><?php echo '<img src="'.$val['Flag_image_url'].'">';?> <?php echo $val['Country']?></option>
+                                    <?php }?>
+                                </select>
+                                
+                                <input type="text" placeholder="zip code" name="zip_code" class="inpu" value="<?php echo $value["zip_code"]?>">
+                                <input type="text" placeholder="company name" name="company_name" class="inpu" value="<?php echo $value["company_name"]?>">
+                                <select name="primary_business" class="inpu" id="">
+                                    <option value="">Select Primary Business</option>
+                                    <option value="Buying Agent" <?php if("Buying Agent" == $value["primary_business"]){echo "selected";}else{"";}?>> Buying Agent</option>
+                                    <option value="Manufacturer" <?php if("Manufacturer" == $value["primary_business"]){echo "selected";}else{"";}?>>Manufacturer</option>
+                                    <option value="OEM dealer" <?php if("OEM dealer" == $value["primary_business"]){echo "selected";}else{"";}?>>OEM Dealer</option>
+                                </select>
+                                
+                                <textarea name="company_details" class="inpu" id="" cols="30" rows="5"><?php echo $value['company_details']?></textarea>
+                                <input type="text" placeholder="establish year" name="establish_year" class="inpu" value="<?php echo $value["establish_year"]?>">
+                                <input type="text" placeholder="gst no" name="gst_no" class="inpu" value="<?php echo $value["gst_no"]?>">
+                                <input type="text" placeholder="company_certification" name="company_certification" class="inpu" value="<?php echo $value["company_certification"]?>">
+                                
+                                <select name="role_comapny" id="" class="inpu">
+                                    <option value="">Select Role</option>
+                                    <option value="supervisor" <?php if("supervisor" == $value["role_comapny"]){echo "selected";}else{"";}?>>Supervisor</option>
+                                    <option value="Owner" <?php if("Owner" == $value["role_comapny"]){echo "selected";}else{"";}?>>Owner</option>
+                                    <option value="Agent" <?php if("Agent" == $value["role_comapny"]){echo "selected";}else{"";}?>>Agent</option>
+                                </select>
+
 
                                <button>Update</button>
                             </form>

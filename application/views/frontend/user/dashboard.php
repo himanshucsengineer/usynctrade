@@ -9,7 +9,17 @@
 
 <?php $this->load->view('frontend/template/dash')?>
 
+
+<div class="user_desh">
+
+        <div class="right">
+            <div class="container">
+            <h2>Welcome to Dashboard</h2>
+
+            </div>
+        </div>
+ 
+
     
-<h2>Welcome to the dashboard</h2>
 
 

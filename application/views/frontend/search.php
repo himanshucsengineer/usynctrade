@@ -36,22 +36,20 @@
                 </div>
             </div>
             
-            <div class="home_product_flex">
+            <div  id="before_search">
+                <div class="home_product_flex" id="dataList">
                 
-                <div  id="before_search">
-			        <div id="dataList" >
-					      
-                    </div>
-				    <div class="text-center" id="load_data_message"></div>
+				
                 </div>
-				<div  id="after_search">
-					<div id="dataList2">
-					      
-                    </div>
-				    <div class="text-center" id="load_data_message2"></div>
+                <div class="text-center" id="load_data_message"></div>
+            </div>   
+            <div id="after_search">
+                <div class="home_product_flex" id="dataList2">
+					
+				    
                 </div>
-                
-            </div>
+                <div class="text-center" id="load_data_message2"></div>
+            </div >
             
         </div>
     </div>
@@ -72,6 +70,7 @@
                
                var country = document.getElementById("keywords").value;
                var product = document.getElementById("products").value;
+               
                 var limit = 6;
                var start = 0;
                var action = 'inactive';
@@ -134,6 +133,7 @@
            $(document).ready(function() {
            var country = document.getElementById("keywords").value;
            var product = document.getElementById("products").value;
+        
            var limit = 6;
            var start = 0;
            var action = 'inactive';
@@ -176,7 +176,7 @@
    
            if (action == 'inactive') {
                action = 'active';
-               load_data(limit, start,product);
+               load_data(limit, start,country,product);
            }
           
            $(window).scroll(function() {
@@ -185,7 +185,7 @@
                    action = 'active';
                    start = start + limit;
                    setTimeout(function() {
-                       load_data(limit, start,product);
+                       load_data(limit, start,country,product);
                    }, 500);
                }
            });

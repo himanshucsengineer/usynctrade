@@ -306,7 +306,13 @@ a:focus {
         margin-bottom: 5px;
     }
 }
-
+.give_right_border{
+    border-right: 2px solid #cdcdcd;
+}
+.heading_line{
+    text-align: left !important;
+    font-size: 25px !important;
+}
 
 
 

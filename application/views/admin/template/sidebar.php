@@ -187,6 +187,9 @@ $parts = basename($url);
         <li class="nav-item <?php echo ($parts == 'joindealdata') ? "active" : "" ?>">
           <a class="nav-link " href="<?php echo base_url(); ?>admin/joindealdata"><i class="fas fa-fw fa-table"></i><span>Join Deal Data</span></a>
         </li>
+        <li class="nav-item <?php echo ($parts == 'tradeinquerydata') ? "active" : "" ?>">
+          <a class="nav-link " href="<?php echo base_url(); ?>admin/tradeinquerydata"><i class="fas fa-fw fa-table"></i><span>Trade Inquery Data</span></a>
+        </li>
         <hr class="sidebar-divider">
 
         <!-- Sidebar Toggler (Sidebar) -->

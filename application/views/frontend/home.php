@@ -62,23 +62,23 @@
                     </div>
                 </div>
             </div>
+            <div  id="before_search">
+                <div class="home_product_flex" id="dataList">
+                
+				
+                </div>
+                <div class="text-center" id="load_data_message"></div>
+            </div>   
+            <div id="after_search">
+                <div class="home_product_flex" id="dataList2">
+					
+				    
+                </div>
+                <div class="text-center" id="load_data_message2"></div>
+            </div >
+				
+                
             
-            <div class="home_product_flex">
-                
-                <div  id="before_search">
-			        <div id="dataList" >
-					      
-                    </div>
-				    <div class="text-center" id="load_data_message"></div>
-                </div>
-				<div  id="after_search">
-					<div id="dataList2">
-					      
-                    </div>
-				    <div class="text-center" id="load_data_message2"></div>
-                </div>
-                
-            </div>
             
         </div>
     </div>

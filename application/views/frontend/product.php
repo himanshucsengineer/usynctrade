@@ -171,23 +171,34 @@
 
 <div class="product_form">
     <div class="container">
+    <?php
+        if ($this->session->flashdata('success')) {
+            echo '<div class="alert alert-success">' . $this->session->flashdata('success') . '</div>';
+        } else if ($this->session->flashdata('error')) {
+            echo '<div class="alert alert-danger">' . $this->session->flashdata('error') . '</div>';
+        }
+        ?>
         <h3>Send your message to suplier</h3>
-        <form action="" method="post">
+        <form action="<?php echo base_url()?>frontend/product/trade_inquery" method="post">
+            <input type="hidden" name="user_name" value="<?php echo $_SESSION['name']?>">
+            <input type="hidden" name="user_email" value="<?php echo $_SESSION['email']?>">
+            <input type="hidden" name="user_number" value="<?php echo $_SESSION['number']?>">
+            <input type="hidden" name="product_id" value="<?php echo $parts?>">
             <div class="row">
                 <div class="col-md-6">
-                    <input type="text" placeholder="Enter Quantity">
+                    <input type="text" name="quantity" placeholder="Enter Quantity">
                 </div>
                 <div class="col-md-6">
-                    <select name="" id="">
+                    <select name="pieces" id="">
                         <option value="">Select Pieces</option>
-                        <option value="">Pieces</option>
-                        <option value="">Cartoon</option>
+                        <option value="Pieces">Pieces</option>
+                        <option value="Cartoon">Cartoon</option>
                     </select>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-6">
-                    <select name="" id="">
+                    <select name="incoterms" id="">
                         <option value="">Select Incoterms</option>
                         <option value="FOB">FOB</option>
                         <option value="CIF">CIF</option>
@@ -196,18 +207,20 @@
                     </select>
                 </div>
                 <div class="col-md-6">
-                    <select name="" id="">
+                    <select name="destination_country" id="">
                         <option value="">Select Destination Country</option>
-                     
+                        <?php foreach($country as $value){?>
+                            <option value="<?php echo $value['Country']?>"><?php echo $value['Country']?></option>
+                        <?php }?>
                     </select>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-6">
-                    <input type="text" placeholder="Enter Your Budget">
+                    <input type="text" name="budget" placeholder="Enter Your Budget">
                 </div>
                 <div class="col-md-6">
-                    <select name="" id="">
+                    <select name="currency" id="">
                         <option value="">Select Currency</option>
                         <option value="INR">Inr</option>
                         <option value="USD">USD</option>
@@ -217,10 +230,14 @@
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    <textarea name="" id="" cols="30" rows="5" placeholder="Your Message..."></textarea>
+                    <textarea name="message" id="" cols="30" rows="5" placeholder="Your Message..."></textarea>
                 </div>
             </div>
-     
+            <?php if(isset($_SESSION['email'])){?>
+            <button class="sub_button">Submit</button>
+            <?php }else{?>
+            <a class="sub_button" type="button" href="<?php echo base_url()?>signin">submit</a>
+            <?php }?>
         </form>
     </div>
 </div>

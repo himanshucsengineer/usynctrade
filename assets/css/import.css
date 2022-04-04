@@ -17,10 +17,12 @@
     outline: none;
     margin-bottom: 1rem;
 }
-.import button{
+.import .sub_but{
     width: 50%;
     height: auto;
     padding: 1rem;
+    text-align: center;
+    text-decoration: none;
     color: white;
     background-color: #ff6a00;
     border: none;

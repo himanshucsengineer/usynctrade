@@ -43,7 +43,7 @@
   .signup_main .card input[type="text"],
   input[type="email"],
   input[type="password"],
-  input[type="number"] {
+  input[type="number"],select,textarea {
     width: 100%;
     height: auto;
     padding: 0.7rem;

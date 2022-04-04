@@ -43,6 +43,8 @@ $parts = basename($url);
                             <a href="<?php echo base_url()?>import"><button class="<?php echo ($parts == 'post_by_leads') ? "active" : "" ?>"><span style="font-size:20px; margin-right:1.5rem;"><i class="fas fa-cart-arrow-down"></i></span>Post By Leads</button></a>
                             <a href="<?php echo base_url()?>user/trade_inqury"><button class="<?php echo ($parts == 'trade_inqury') ? "active" : "" ?>"><span style="font-size:20px; margin-right:1.5rem;"><i class="fas fa-bell"></i></span>Trade Inqury</button></a>
                             <a href="<?php echo base_url()?>user/joindeal"><button class="<?php echo ($parts == 'joindeal') ? "active" : "" ?>"><span style="font-size:20px; margin-right:1.5rem;"><i class="fas fa-bell"></i></span>Join Deal Inqury</button></a>
+                            <a href="<?php echo base_url()?>user/importdata"><button class="<?php echo ($parts == 'importdata') ? "active" : "" ?>"><span style="font-size:20px; margin-right:1.5rem;"><i class="fas fa-bell"></i></span>Import Inqury data</button></a>
+                            <a href="<?php echo base_url()?>user/exportdata"><button class="<?php echo ($parts == 'exportdata') ? "active" : "" ?>"><span style="font-size:20px; margin-right:1.5rem;"><i class="fas fa-bell"></i></span>Export Inqury data</button></a>
                             <a href="<?php echo base_url()?>frontend/logout"><button><span style="font-size:20px; margin-right:1.5rem;"><i class="fas fa-sign-out-alt"></i></span>Logout</button></a>
                         </div>
 

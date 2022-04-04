@@ -9,6 +9,59 @@
 
 <?php $this->load->view('frontend/template/dash')?>
 
+<div class="user_desh">
     
+    <div class="right">
+        <div class="container">
+            
+            
+            <h4 class="your_page_head" >Your Trade Inqury</h4>
+            <hr class="hori">
+            <div class="box">
+                <div class="container">
+                    
+                    <div class="table-responsive t_box">
+                        <table id="campaign" class="table table-striped table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Quantity</th>
+                                    <th>Pieces</th>
+                                    <th>Incoterm</th>
+                                    <th>Destination Country</th>
+                                    <th>Budget</th>
+                                    <th>Currency</th>
+                                    <th>Message</th>
+                                    <th>View Product</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php foreach($fetch_data as $value){if($value['user_email']==$_SESSION['email']){?>
+                                <tr>
+                                    <td><?php echo $value['quantity']?></td>
+                                    <td><?php echo $value['pieces']?></td>
+                                    <td><?php echo $value['incoterms']?></td>
+                                    <td><?php echo $value['destination_country']?></td>
+                                    <td><?php echo $value['budget']?></td>
+                                    <td><?php echo $value['currency']?></td>
+                                    <td><?php echo $value['message']?></td>
+                                    <td><a href="<?php echo base_url()?>product/<?php echo $value['product_id']?>" target="_blank">View Product</a></td>
+                                </tr>
+                                <?php }}?>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>    
+            </div> 
+            
+        </div>    
+    </div>
+</div>    
 
 
+
+<script>
+    $(document).ready(function() {
+    $('#campaign').DataTable();
+} );
+
+</script>

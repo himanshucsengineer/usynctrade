@@ -110,10 +110,14 @@
                         <h3>News-notice</h3>
                         <div class="row">
                             <div class="col-md-6">
-                                <label>Exporter</label>
+                                <label>Exporter Name</label>
+                                <input type="text" name="news_export_name" placeholder="Please Enter Name" >
+                                <label>Exporter File</label>
                                 <input type="file" name="news_export" id="" >
                             </div>
                             <div class="col-md-6">
+                                <label>importer Name</label>
+                                <input type="text" name="news_import_name" placeholder="Please Enter Name" >
                                 <label>Importer</label>
                                 <input type="file" name="news_import" id="" >
                             </div>
@@ -122,10 +126,14 @@
                         <h3>Duties & Certificate</h3>
                         <div class="row">
                             <div class="col-md-6">
+                                <label>Exporter Name</label>
+                                <input type="text" name="duty_export_name" placeholder="Please Enter Name" >
                                 <label>Exporter</label>
                                 <input type="file" name="duty_export" id="" >
                             </div>
                             <div class="col-md-6">
+                                <label>importer Name</label>
+                                <input type="text" name="duty_import_name" placeholder="Please Enter Name" >
                                 <label>Importer</label>
                                 <input type="file" name="duty_import" id="" >
                             </div>
@@ -134,10 +142,14 @@
                         <h3>Staistics-Data</h3>
                         <div class="row">
                             <div class="col-md-6">
+                                <label>Exporter Name</label>
+                                <input type="text" name="statics_export_name" placeholder="Please Enter Name" >
                                 <label>Exporter</label>
                                 <input type="file" name="statics_export" id="" >
                             </div>
                             <div class="col-md-6">
+                                <label>Importer Name</label>
+                                <input type="text" name="statics_import_name" placeholder="Please Enter Name" >
                                 <label>Importer</label>
                                 <input type="file" name="statics_import" id="" >
                             </div>
@@ -146,10 +158,14 @@
                         <h3>Cost Calculation</h3>
                         <div class="row">
                             <div class="col-md-6">
+                            <label>Exporter Name</label>
+                                <input type="text" name="cost_export_name" placeholder="Please Enter Name" >
                                 <label>Exporter</label>
                                 <input type="file" name="cost_export" id="" >
                             </div>
                             <div class="col-md-6">
+                            <label>Importer Name</label>
+                                <input type="text" name="cost_import_name" placeholder="Please Enter Name" >
                                 <label>Importer</label>
                                 <input type="file" name="cost_import" id="" >
                             </div>
@@ -158,10 +174,14 @@
                         <h3>Today Trend</h3>
                         <div class="row">
                             <div class="col-md-6">
+                            <label>Exporter Name</label>
+                                <input type="text" name="today_export_name" placeholder="Please Enter Name" >
                                 <label>Exporter</label>
                                 <input type="file" name="today_export" id="" >
                             </div>
                             <div class="col-md-6">
+                            <label>Importer Name</label>
+                                <input type="text" name="today_import_name" placeholder="Please Enter Name" >
                                 <label>Importer</label>
                                 <input type="file" name="today_import" id="" >
                             </div>

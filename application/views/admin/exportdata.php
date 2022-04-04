@@ -83,6 +83,13 @@
                   <th>Comapny Name</th>
                   <th>Country</th>
                   <th>Address</th>
+                  <th>Product Name</th>
+                  <th>Quantity</th>
+                  <th>Category</th>
+                  <th>Units</th>
+                  <th>Origin Country</th>
+                  <th>Product Description</th>
+
                   <th>Action</th>
 
                 </tr>
@@ -99,7 +106,13 @@
                       <td><?php echo $value['company_name']; ?></td>
                       <td><?php echo $value['country']; ?></td>
                       <td><?php echo $value['address']; ?></td>
-                      
+
+                      <td><?php echo $value['product_name']; ?></td>
+                      <td><?php echo $value['quantity']; ?></td>
+                      <td><?php echo $value['category']; ?></td>
+                      <td><?php echo $value['units']; ?></td>
+                      <td><?php echo $value['origin_country']; ?></td>
+                      <td><?php echo $value['product_desc']; ?></td>
                       
                       <td><a class="delete_sliders" data-id="<?php echo $value['id']?>"  style="color: red;cursor: pointer;" data-toggle="tooltip" data-original-title="Delete"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
                     </form>

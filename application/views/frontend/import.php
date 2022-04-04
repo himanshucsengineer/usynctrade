@@ -15,7 +15,7 @@
         }
         ?>
     <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-12">
             <h3>Basic Product Details</h3>
             <div class="row">
                 <div class="col-md-6">
@@ -105,29 +105,30 @@
             <label for="">Product Details</label>
             <textarea name="product_details" id="" cols="30" rows="5"></textarea>
         </div>
-        <div class="col-md-4">
-            <h3>Contact Information</h3>
-            <label for="">Name</label>
-            <input type="text" name="name" placeholder="Enter Name">
-            <label for="">Email</label>
-            <input type="email" name="email" placeholder="Enter Email">
-            <label for="">Number</label>
-            <input type="number" name="number" placeholder="Enter Number">
-            <label for="">Company Name</label>
-            <input type="text" name="company_name" placeholder="Enter Comapny Name">
-            <label for="">Country</label>
-            <select name="country" id="">
-                <option value="">Select Country</option>
-                <?php foreach($country as $value){?>
-                    <option value="<?php echo $value['name']?>"><?php echo $value['name']?></option>
-                <?php }?>
-            </select>
-            <label for="">Address</label>
-            <textarea name="address" id="" cols="30" rows="5"></textarea>
-        </div>
+       
+           
+         
+            <input type="hidden" name="name" placeholder="Enter Name" value="<?php echo $_SESSION['name']?>">
+          
+            <input type="hidden" name="email" placeholder="Enter Email" value="<?php echo $_SESSION['email']?>">
+         
+            <input type="hidden" name="number" placeholder="Enter Number" value="<?php echo $_SESSION['number']?>">
+        
+            <input type="hidden" name="company_name" placeholder="Enter Comapny Name" value="<?php echo $_SESSION['company_name']?>">
+            
+            
+            <input type="hidden" name="country" id="" value="<?php echo $_SESSION['country']?>">
+       
+            <input type="hidden" name="address" id="" value="<?php echo $_SESSION['address']?>">
+           
+        
     </div>
     <div class="text-center">
-        <button>Submit</button>
+        <?php if(isset($_SESSION['email'])){?>
+        <button class="sub_but">Submit</button>
+        <?php }else{?>
+            <a class="sub_but" type="button" href="<?php echo base_url()?>signin">Submit</a>
+        <?php }?>
     </div>
     
     </div>

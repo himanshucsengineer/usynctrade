@@ -16,7 +16,7 @@ class Usermodel extends CI_Model
         return $response;
     }
 
-    function update_profile($name, $email, $number,$address){
+    function update_profile($name,$email,$number,$address,$city,$state,$country,$zip_code,$company_name,$primary_business,$company_details,$establish_year,$gst_no,$company_certification,$role_comapny){
       
         $data = array(
          
@@ -24,6 +24,19 @@ class Usermodel extends CI_Model
           'email' => $email,
           'number' => $number,
           'address' => $address,
+
+          'city' => $city,
+          'state' => $state,
+          'country' => $country,
+          'zip_code' => $zip_code,
+          'company_name' => $company_name,
+          'primary_business' => $primary_business,
+          'company_details' => $company_details,
+          'establish_year' => $establish_year,
+          'gst_no' => $gst_no,
+          'company_certification' => $company_certification,
+          'role_comapny' => $role_comapny,
+        
         );
                    
        $this->db->set($data);

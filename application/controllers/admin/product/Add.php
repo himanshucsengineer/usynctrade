@@ -28,7 +28,7 @@ class Add extends CI_controller
   {
       $this->load->model('admin/productmodel');
       $this->input->post('formSubmit');
-
+      $countryyyy=$this->productmodel->fetch_country();
       $this->form_validation->set_rules('name', 'Name', 'required');
       $this->form_validation->set_rules('product_size', 'product size', 'required');
       $this->form_validation->set_rules('dispetch_time', 'dispetch time', 'required');
@@ -76,6 +76,13 @@ class Add extends CI_controller
       
      
       if ($this->form_validation->run()) {
+
+        foreach($countryyyy as $val){
+          if($val['Country'] ==  $this->input->post('origin_place')){
+            $country_fleg = $val['Flag_image_url'];
+        }
+        }
+
         if (!empty($_FILES['images']['name'])) {
 
           $File_name ='';
@@ -110,7 +117,7 @@ class Add extends CI_controller
                   'shipment_port' =>$this->input->post('shipment_port'),
                   'main_image' => $imageurl,
                   'payment_terms' =>$this->input->post('payment_terms'),
-                  
+                  'country_fleg' =>$country_fleg,
                   'fob_price' =>$this->input->post('fob_price'),
 
                   'cif_price' =>$this->input->post('cif_price'),

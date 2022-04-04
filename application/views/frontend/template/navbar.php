@@ -232,6 +232,8 @@
             <a class="dropdown-item" href="'.base_url().'import">Post by Leads</a>
             <a class="dropdown-item" href="'.base_url().'user/trade_inqury">Trade Inqury</a>
             <a class="dropdown-item" href="'.base_url().'user/joindeal">Join Deal Inqury</a>
+            <a class="dropdown-item" href="'.base_url().'user/importdata">Import Inqury Data</a>
+            <a class="dropdown-item" href="'.base_url().'user/exportdata">Export Inqury Data</a>
             <a class="dropdown-item" href="'.base_url().'frontend/logout">Logout</a>
         </div>
         </li>

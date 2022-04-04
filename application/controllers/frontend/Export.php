@@ -29,6 +29,13 @@ class Export extends CI_controller
         $this->form_validation->set_rules('country', 'country', 'required');
         $this->form_validation->set_rules('address', 'address', 'required');
         
+
+        $this->form_validation->set_rules('product_name', 'Name', 'required');
+        $this->form_validation->set_rules('quantity', 'Email', 'required');
+        $this->form_validation->set_rules('category', 'number', 'required');
+        $this->form_validation->set_rules('units', 'company_name', 'required');
+        $this->form_validation->set_rules('origin_country', 'country', 'required');
+        $this->form_validation->set_rules('product_desc', 'address', 'required');
         
         if ($this->form_validation->run()) {
         
@@ -40,6 +47,12 @@ class Export extends CI_controller
                     'country' =>$this->input->post('country'),
                     'address' =>$this->input->post('address'),
                    
+                    'product_name' =>$this->input->post('product_name'),
+                    'quantity' =>$this->input->post('quantity'),
+                    'category' => $this->input->post('category'),
+                    'units' =>$this->input->post('units'),
+                    'origin_country' =>$this->input->post('origin_country'),
+                    'product_desc' =>$this->input->post('product_desc'),
                     
                 );
                 if ($this->Exportmodel->insert_data($data)) {

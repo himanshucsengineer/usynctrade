@@ -33,6 +33,13 @@ class Login extends CI_controller
                 $_SESSION["email"] = $value["email"];
                 $_SESSION["name"] = $value["name"];
                 $_SESSION["number"] = $value["number"];
+
+                $_SESSION["address"] = $value["address"];
+                $_SESSION["city"] = $value["city"];
+                $_SESSION["state"] = $value["state"];
+                $_SESSION["country"] = $value["country"];
+                $_SESSION["company_name"] = $value["company_name"];
+                
                 
                 $login_success = 1;
                 break;
@@ -57,6 +64,19 @@ class Login extends CI_controller
         $this->form_validation->set_rules('email', 'Email', 'required');
         $this->form_validation->set_rules('number', 'Mobile No', 'required');
         $this->form_validation->set_rules('address', 'address', 'required');
+
+        $this->form_validation->set_rules('city', 'city', 'required');
+        $this->form_validation->set_rules('state', 'state', 'required');
+        $this->form_validation->set_rules('country', 'country', 'required');
+        $this->form_validation->set_rules('zip_code', 'zip_code', 'required');
+        $this->form_validation->set_rules('company_name', 'company_name', 'required');
+        $this->form_validation->set_rules('primary_business', 'primary_business', 'required');
+        $this->form_validation->set_rules('company_details', 'company_details', 'required');
+        $this->form_validation->set_rules('establish_year', 'establish_year', 'required');
+        $this->form_validation->set_rules('gst_no', 'gst_no', 'required');
+        $this->form_validation->set_rules('company_certification', 'company_certification', 'required');
+        $this->form_validation->set_rules('role_comapny', 'role_comapny', 'required');
+
       
         if ($this->form_validation->run()) {
             
@@ -66,7 +86,20 @@ class Login extends CI_controller
             $number = $this->input->post('number');
             $address = $this->input->post('address');
 
-            if ($this->Usermodel->update_profile( $name, $email, $number,$address)) {
+            $city = $this->input->post('city');
+            $state = $this->input->post('state');
+            $country = $this->input->post('country');
+            $zip_code = $this->input->post('zip_code');
+            $company_name = $this->input->post('company_name');
+            $primary_business = $this->input->post('primary_business');
+            $company_details = $this->input->post('company_details');
+            $establish_year = $this->input->post('establish_year');
+            $gst_no = $this->input->post('gst_no');
+            $company_certification = $this->input->post('company_certification');
+            $role_comapny = $this->input->post('role_comapny');
+           
+
+            if ($this->Usermodel->update_profile( $name,$email,$number,$address,$city,$state,$country,$zip_code,$company_name,$primary_business,$company_details,$establish_year,$gst_no,$company_certification,$role_comapny)) {
                 $this->session->set_flashdata('error', 'Technical error');
                 redirect(base_url() . 'user/profile');
             } else {

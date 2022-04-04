@@ -69,6 +69,8 @@ $route['user/profile'] = 'frontend/user/profile';
 $route['user/your_product'] = 'frontend/user/your_product';
 $route['user/post_by_leads'] = 'frontend/user/post_by_leads';
 $route['user/trade_inqury'] = 'frontend/user/trade_inqury';
+$route['user/importdata'] = 'frontend/user/importdata';
+$route['user/exportdata'] = 'frontend/user/exportdata';
 
  $route['404_override'] = 'Error404';
 $route['translate_uri_dashes'] = FALSE;

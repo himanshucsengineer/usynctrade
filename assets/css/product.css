@@ -80,9 +80,11 @@ outline: none;
 background-color: white !important;
 margin-bottom: 1rem;
 }
-.product_form button{
+.product_form .sub_button{
 width: 100%;
     height: auto;
+    text-align: center;
+    text-decoration: none;
     padding: .5rem;
     background-color: #00a9ea;
     color: white;

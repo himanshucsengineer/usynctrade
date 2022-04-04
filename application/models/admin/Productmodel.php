@@ -7,7 +7,16 @@ class Productmodel extends CI_Model
     {
         return  $this->db->insert('product', $data);
     }
-    
+
+
+    function insert_trade_inquery($data)
+    {
+        return  $this->db->insert('trade_inquery', $data);
+    }
+    public function fetch_trade_inquery()
+    {
+      return $this->db->get('trade_inquery')->result_array();
+    }
     function create_category($data)
     {
         return  $this->db->insert('product_cate', $data);
@@ -90,4 +99,18 @@ function filter_basesd_on_both($limit, $start, $country,$product){
       }
     }
    
+
+
+
+    public function delete_trade_inquery_data($data)
+    {
+      $explodData = explode(',', $data);
+      $this->db->where_in('id', $explodData);
+      $getDeleteStatus = $this->db->delete('trade_inquery');
+      if ($getDeleteStatus == 1) {
+        return array('message' => 'yes');
+      } else {
+        return array('message' => 'no');
+      }
+    }
 }
