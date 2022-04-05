@@ -12,6 +12,10 @@ class Itrademodel extends CI_Model
     {
       return $this->db->get('country_flag')->result_array();
     }
+    public function fetchinventory_api()
+    {
+      return $this->db->get('itrade')->result_array();
+    }
 
     function filter_basesd_destination($limit, $start, $destination){
     $this->db->select("*");
@@ -63,6 +67,16 @@ function filter_basesd_on_all($limit, $start, $name,$source,$destination){
   
 }
     
-    
+public function deleteitradeupdate($data)
+{
+  $explodData = explode(',', $data);
+  $this->db->where_in('id', $explodData);
+  $getDeleteStatus = $this->db->delete('itrade');
+  if ($getDeleteStatus == 1) {
+    return array('message' => 'yes');
+  } else {
+    return array('message' => 'no');
+  }
+}
    
 }

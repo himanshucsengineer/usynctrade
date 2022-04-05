@@ -42,6 +42,29 @@ class Joindealmodel extends CI_Model
      $this->db->where('id',$id);
       $this->db->update('join_deal');
   }
+
+
+  function update_joindeal($name, $category,$destination_country,$date,$id,$target_price,$quantity,$payment_terms,$shipping_terms,$imageurl,$description){
+      
+    $data = array(
+      'name' =>$name,
+      'category' => $category,
+      'destination_country' =>$destination_country,
+      'date' => $date,
+      'id' =>$id,
+      'target_price' => $target_price,
+      'quantity' =>$quantity,
+      'payment_terms' => $payment_terms,
+      'shipping_terms' =>$shipping_terms,
+      'imageurl' => $imageurl,
+      'description' =>$description,
+     
+    );
+    $this->db->set($data);
+    $this->db->where('id',$id);
+    $this->db->update('join_deal');
+}
+
     function filter_basesd_state($limit, $start, $state){
       $this->db->select("*");
       $this->db->from("sez_industry");

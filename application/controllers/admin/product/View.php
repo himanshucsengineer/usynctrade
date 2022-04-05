@@ -8,18 +8,18 @@ class View extends CI_controller
     if (!$this->session->userdata('vendorAuth')) {
       redirect('login');
     }
-    //$this->load->model('admin/Sezmodel');
+    $this->load->model('admin/productmodel');
   }
 
   public function index()
   {
 
 
-    //$data['list']=$this->Sezmodel->fetchinventory_api();
+    $data['list']=$this->productmodel->fetch_product();
     $this->load->view('admin/template/header');
     $this->load->view('admin/template/sidebar');
     $this->load->view('admin/template/topbar');
-    $this->load->view('admin/product/view');
+    $this->load->view('admin/product/view',$data);
     $this->load->view('admin/template/footer');
   }
 
@@ -31,17 +31,17 @@ class View extends CI_controller
     if ($this->input->post('deletesliderId')) {
       $this->form_validation->set_rules('deletesliderId', 'text', 'required');
       if ($this->form_validation->run() == true) {
-        $getDeleteStatus = $this->Sezmodel->deletecontactdata($this->input->post('deletesliderId'));
+        $getDeleteStatus = $this->productmodel->delete_product($this->input->post('deletesliderId'));
         if ($getDeleteStatus['message'] == 'yes') {
           $this->session->set_flashdata('success', 'Data deleted successfully');
-          redirect(base_url() . "admin/sez/view");
+          redirect(base_url() . "admin/product/view");
         } else {
           $this->session->set_flashdata('error', 'Something went wrong. Please try again');
-          redirect(base_url() . "admin/sez/view");
+          redirect(base_url() . "admin/product/view");
         }
       } else {
         $this->session->set_flashdata('error', 'Something went wrong. Please try again');
-        redirect(base_url() . "admin/sez/view");
+        redirect(base_url() . "admin/product/view");
       }
     }
   }

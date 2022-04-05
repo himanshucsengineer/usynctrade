@@ -7,7 +7,10 @@ class Productmodel extends CI_Model
     {
         return  $this->db->insert('product', $data);
     }
-
+    function fetch_product()
+    {
+      return $this->db->get('product')->result_array();
+    }
 
     function insert_trade_inquery($data)
     {
@@ -107,6 +110,18 @@ function filter_basesd_on_both($limit, $start, $country,$product){
       $explodData = explode(',', $data);
       $this->db->where_in('id', $explodData);
       $getDeleteStatus = $this->db->delete('trade_inquery');
+      if ($getDeleteStatus == 1) {
+        return array('message' => 'yes');
+      } else {
+        return array('message' => 'no');
+      }
+    }
+
+    public function delete_product($data)
+    {
+      $explodData = explode(',', $data);
+      $this->db->where_in('id', $explodData);
+      $getDeleteStatus = $this->db->delete('product');
       if ($getDeleteStatus == 1) {
         return array('message' => 'yes');
       } else {
