@@ -52,7 +52,7 @@
 
 <div class="all_post">
   <div class="container">
-    <h3>All Sez Industry</h3>
+    <h3>All Products</h3>
     <hr>
 
     <?php

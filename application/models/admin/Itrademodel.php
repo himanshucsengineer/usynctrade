@@ -54,8 +54,47 @@ function filter_basesd_name($limit, $start, $name){
 
 
 
-function filter_basesd_on_all($limit, $start, $name,$source,$destination){
-  $array = array('source_country' => $source, 'name' => $name, 'destination_country'=>$destination);
+function filter_basesd_on_all($limit, $start, $destination, $name, $source){
+  $array = array('source_country' => $source, 'name' => $name, 'destination_country' => $destination);
+  $this->db->select("*");
+  $this->db->from("itrade");
+
+  $this->db->like($array);
+  $this->db->order_by("id", "DESC");
+  $this->db->limit($limit, $start);
+  $query = $this->db->get();
+  return $query;
+  
+}
+
+function filter_basesd_on_name_source($limit, $start, $name, $source){
+  $array = array('source_country' => $source, 'name' => $name);
+  $this->db->select("*");
+  $this->db->from("itrade");
+
+  $this->db->like($array);
+  $this->db->order_by("id", "DESC");
+  $this->db->limit($limit, $start);
+  $query = $this->db->get();
+  return $query;
+  
+}
+
+function filter_basesd_on_name_destination($limit, $start, $name, $destination){
+  $array = array('destination_country' => $destination, 'name' => $name);
+  $this->db->select("*");
+  $this->db->from("itrade");
+
+  $this->db->like($array);
+  $this->db->order_by("id", "DESC");
+  $this->db->limit($limit, $start);
+  $query = $this->db->get();
+  return $query;
+  
+}
+
+function filter_basesd_on_source_destination($limit, $start, $name, $source){
+  $array = array('destination_country' => $destination, 'source_country' => $source);
   $this->db->select("*");
   $this->db->from("itrade");
 

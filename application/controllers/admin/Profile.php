@@ -7,7 +7,7 @@ class Profile extends CI_Controller
     {
         parent::__construct();
         if (!$this->session->userdata('vendorAuth')) {
-            redirect('login');
+            redirect('admin/login');
         }
         $this->load->helper('url');
         $this->perPage = 100;

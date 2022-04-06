@@ -56,7 +56,7 @@ class Joindealmodel extends CI_Model
       'quantity' =>$quantity,
       'payment_terms' => $payment_terms,
       'shipping_terms' =>$shipping_terms,
-      'imageurl' => $imageurl,
+      'image' => $imageurl,
       'description' =>$description,
      
     );

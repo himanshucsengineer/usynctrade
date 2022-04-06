@@ -75,7 +75,7 @@
         }
         ?>
         <h3>Update Sez Industry Details</h3>
-        <form method="post" action="<?php echo base_url()?>admin/sez/edit/update" enctype="multipart/form-data">
+        <form method="post" action="<?php echo base_url()?>admin/join_deal/edit/update" enctype="multipart/form-data">
         <?php if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'ON'){
                     $url = "https://";
                 }else{

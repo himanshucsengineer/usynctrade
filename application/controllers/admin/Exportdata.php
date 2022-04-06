@@ -6,7 +6,7 @@ class Exportdata extends CI_controller
   {
     parent::__construct();
     if (!$this->session->userdata('vendorAuth')) {
-      redirect('login');
+      redirect('admin/login');
     }
     $this->load->model('frontend/Exportmodel');
   }

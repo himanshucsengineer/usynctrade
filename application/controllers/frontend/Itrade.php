@@ -32,12 +32,24 @@ class Itrade extends CI_controller
         }elseif(empty($this->input->post('source')) && !empty($this->input->post('name')) && empty($this->input->post('destination'))){
             $name= $this->input->post('name');
             $data = $this->itrademodel->filter_basesd_name($this->input->post('limit'), $this->input->post('start'), $name);
-        }
-        elseif(!empty($this->input->post('name')) && !empty($this->input->post('source')) && !empty($this->input->post('destination'))){
+        }elseif(!empty($this->input->post('name')) && !empty($this->input->post('source')) && !empty($this->input->post('destination'))){
             $destination= $this->input->post('destination');
             $name =  $this->input->post('name');
             $source =  $this->input->post('source');
             $data = $this->itrademodel->filter_basesd_on_all($this->input->post('limit'), $this->input->post('start'), $destination, $name, $source);
+        }elseif(!empty($this->input->post('name')) && !empty($this->input->post('source')) && empty($this->input->post('destination'))){
+            $name =  $this->input->post('name');
+            $source =  $this->input->post('source');
+            $data = $this->itrademodel->filter_basesd_on_name_source($this->input->post('limit'), $this->input->post('start'), $name, $source);
+        }elseif(!empty($this->input->post('name')) && empty($this->input->post('source')) && !empty($this->input->post('destination'))){
+            $name =  $this->input->post('name');
+            $destination= $this->input->post('destination');
+            $data = $this->itrademodel->filter_basesd_on_name_destination($this->input->post('limit'), $this->input->post('start'), $name, $destination);
+        }
+        elseif(empty($this->input->post('name')) && !empty($this->input->post('source')) && !empty($this->input->post('destination'))){
+            $source =  $this->input->post('source');
+            $destination= $this->input->post('destination');
+            $data = $this->itrademodel->filter_basesd_on_source_destination($this->input->post('limit'), $this->input->post('start'), $source, $destination);
         }
         if($data->num_rows() > 0)
         {
@@ -45,7 +57,7 @@ class Itrade extends CI_controller
             foreach($data->result() as $row)
             {   
                 
-                $output .= '<div class="tab-pane " id="home1" role="tabpanel">
+                $output .= '<div class="tab-pane Active" id="home1" role="tabpanel">
                                 <div class="row">
                                     <div class="col-md-6 give_right_border">
                                         <ul class="text-left">

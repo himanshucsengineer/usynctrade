@@ -33,6 +33,11 @@ class Productmodel extends CI_Model
     {
       return $this->db->get('user')->result_array();
     }
+    public function update_product($data,$id){
+      $this->db->set($data);
+      $this->db->where('id',$id);
+      $this->db->update('product');
+    }
 
     function filter_basesd_country($limit, $start, $country){
       $this->db->select("*");

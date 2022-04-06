@@ -6,11 +6,11 @@ class Add extends CI_controller
   {
     parent::__construct();
     if (!$this->session->userdata('vendorAuth')) {
-      redirect('login');
+      redirect('admin/login');
     }
     $this->load->model('admin/productmodel');
   }
-
+ 
   public function index()
   { 
     $data['fetch_users']=$this->productmodel->fetch_users();
