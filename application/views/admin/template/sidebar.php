@@ -131,7 +131,8 @@ $parts = basename($url);
               <a class="collapse-item " href="<?php echo base_url(); ?>admin/product/add" style="font-size:1.3rem; ">Add Product</a>
               <a class="collapse-item " href="<?php echo base_url(); ?>admin/product/view" style="font-size:1.3rem; ">View All Products</a>
               <a class="collapse-item " href="<?php echo base_url(); ?>admin/product/category" style="font-size:1.3rem; ">View/ADD Category</a>
-
+              <a class="collapse-item " href="<?php echo base_url(); ?>admin/product/add_product_photo" style="font-size:1.3rem; ">View/Add Products image</a>
+              <a class="collapse-item " href="<?php echo base_url(); ?>admin/product/add_company_photo" style="font-size:1.3rem; ">View/ADD Comapny Image</a>
               <div class="collapse-divider"></div>
             </div>
           </div>

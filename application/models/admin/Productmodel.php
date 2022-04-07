@@ -7,11 +7,30 @@ class Productmodel extends CI_Model
     {
         return  $this->db->insert('product', $data);
     }
+
+
+    function upload_product_image($data)
+    {
+        return  $this->db->insert('product_image', $data);
+    }
+    function upload_comapany_image($data)
+    {
+        return  $this->db->insert('company_image', $data);
+    }
+
     function fetch_product()
     {
       return $this->db->get('product')->result_array();
     }
 
+    function fetch_product_image()
+    {
+      return $this->db->get('product_image')->result_array();
+    }
+    function fetch_company_image()
+    {
+      return $this->db->get('company_image')->result_array();
+    }
     function insert_trade_inquery($data)
     {
         return  $this->db->insert('trade_inquery', $data);
@@ -127,6 +146,29 @@ function filter_basesd_on_both($limit, $start, $country,$product){
       $explodData = explode(',', $data);
       $this->db->where_in('id', $explodData);
       $getDeleteStatus = $this->db->delete('product');
+      if ($getDeleteStatus == 1) {
+        return array('message' => 'yes');
+      } else {
+        return array('message' => 'no');
+      }
+    }
+
+    public function delete_product_image($data)
+    {
+      $explodData = explode(',', $data);
+      $this->db->where_in('id', $explodData);
+      $getDeleteStatus = $this->db->delete('product_image');
+      if ($getDeleteStatus == 1) {
+        return array('message' => 'yes');
+      } else {
+        return array('message' => 'no');
+      }
+    }
+    public function delete_company_image($data)
+    {
+      $explodData = explode(',', $data);
+      $this->db->where_in('id', $explodData);
+      $getDeleteStatus = $this->db->delete('company_image');
       if ($getDeleteStatus == 1) {
         return array('message' => 'yes');
       } else {

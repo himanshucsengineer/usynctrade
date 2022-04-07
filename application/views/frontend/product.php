@@ -33,27 +33,12 @@
            <div class="row">
                 <div class="col-md-4">
                     <div class="flex logo_slider">
+                        <?php foreach($fetch_product_image as $pro_img){if($pro_img['product_id']==$value['id']){?>
                         <div class="card_main">
-                            <img src="assets/img/slider1.jpg" alt="">
+                            <img src="<?php echo base_url()?>upload/product/<?php echo $pro_img['image']?>" alt="">
                         </div>
-                        <div class="card_main">
-                            <img src="assets/img/slider2.jpg" alt="">
-                        </div>
-                        <div class="card_main">
-                            <img src="assets/img/slider3.jpg" alt="">
-                        </div>
-                        <div class="card_main">
-                            <img src="assets/img/slider2.jpg" alt="">
-                        </div>
-                        <div class="card_main">
-                            <img src="assets/img/slider1.jpg" alt="">
-                        </div>
-                        <div class="card_main">
-                            <img src="assets/img/slider2.jpg" alt="">
-                        </div>
-                        <div class="card_main">
-                            <img src="assets/img/slider3.jpg" alt="">
-                        </div>
+                        <?php }}?>
+                        
                     </div>
                 </div>
                 <div class="col-md-8">
@@ -89,7 +74,7 @@
                             </select>
                         </div>
                         <div class="col-md-6">
-                            <button>Send your message to this supplier</button>
+                            <a href="#send_message"><button>Send your message to this supplier</button></a>
                         </div>
                     </div>
                 </div>
@@ -138,15 +123,24 @@
                     </div>
                     
                     <div class="tab-pane fade shadow rounded bg-white p-5" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
-                        <h4 class=" mb-4">Verfied</h4>
+                    <div class="company_image_flex">   
+                    
+                    <?php foreach($fetch_company_image as $pro_img){if($pro_img['product_id']==$value['id']){?>
+                        <div class="image_card">
+                            <img src="<?php echo base_url()?>upload/product/<?php echo $pro_img['image']?>" alt="">
+                        </div>
+                        <?php }}?>   
+                    </div>
+                    <h4 class=" mb-4"></h4>
                         <div class="row">
                             <div class="col-md-6">
-                                <p class=" text-muted mb-2">1. Cpmpany Name : <?php echo $value['comapny_name']?></p>
-                                <p class=" text-muted mb-2">3. Business Type : <?php echo $value['business_type']?></p>
-                                <p class=" text-muted mb-2">5. Main Products : <?php echo $value['main_product']?></p>
-                                <p class=" text-muted mb-2">7. No. Of Offices : <?php echo $value['no_of_office']?></p>
-                                <p class=" text-muted mb-2">9. Total Employee : <?php echo $value['total_employee']?></p>
-                                <p class=" text-muted mb-2">11. Orgenisation Membership : <?php echo $value['membership']?></p>
+                                <p class=" mb-2" style="color:green;">1. Verfied <i class="fas fa-check"></i></p>
+                                <p class=" text-muted mb-2">3. Cpmpany Name : <?php echo $value['comapny_name']?></p>
+                                <p class=" text-muted mb-2">5. Business Type : <?php echo $value['business_type']?></p>
+                                <p class=" text-muted mb-2">7. Main Products : <?php echo $value['main_product']?></p>
+                                <p class=" text-muted mb-2">9. No. Of Offices : <?php echo $value['no_of_office']?></p>
+                                <p class=" text-muted mb-2">11. Total Employee : <?php echo $value['total_employee']?></p>
+                                <p class=" text-muted mb-2">13. Orgenisation Membership : <?php echo $value['membership']?></p>
                             </div>
                             <div class="col-md-6">
                                 <p class=" text-muted mb-2">2. Country : <?php echo $value['company_country']?></p>
@@ -155,7 +149,7 @@
                                 <p class=" text-muted mb-2">8. Certificates : <?php echo $value['comapny_certificates']?></p>
                                 <p class=" text-muted mb-2">10. Response Time : <?php echo $value['response_time']?></p>
                                 <p class=" text-muted mb-2">12. Total Annual Revenue : <?php echo $value['annual_revenue']?></p>
-                                <p class=" text-muted mb-2">13. Contract Services : <?php echo $value['contract_services']?></p>
+                                <p class=" text-muted mb-2">14. Contract Services : <?php echo $value['contract_services']?></p>
                             </div>
                         </div>
                         
@@ -169,7 +163,7 @@
 </section>
 <?php }}?>
 
-<div class="product_form">
+<div class="product_form" id="send_message">
     <div class="container">
     <?php
         if ($this->session->flashdata('success')) {

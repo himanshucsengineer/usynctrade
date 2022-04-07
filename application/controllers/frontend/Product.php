@@ -10,6 +10,8 @@ class Product extends CI_controller
 
     public function index()
     {
+        $data['fetch_company_image']=$this->productmodel->fetch_company_image();
+        $data['fetch_product_image']=$this->productmodel->fetch_product_image();
         $data['country']=$this->joindealmodel->fetch_country();
         $data['product_details']=$this->productmodel->fetch_profuctssss();
         $this->load->view('frontend/template/header');
