@@ -1,3 +1,8 @@
+
+<script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.23/js/dataTables.bootstrap4.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/dataTables.bootstrap4.min.css">
 <link rel="stylesheet" href="<?php echo base_url()?>assets/css/home.css">
 </head>
 <style>
@@ -6,6 +11,7 @@
         margin-left:.5rem;
     }
 </style>
+
 <?php $this->load->view('frontend/template/navbar')?>
 <div class="hero_section">
         <div id="carouselExampleIndicators" class="carousel slide my-carousel my-carousel" data-ride="carousel">
@@ -37,9 +43,9 @@
     </div>
 
     <div class="home_product">
-        <div class="container-fluid">
+        <div class="container">
             <div class="row justify-content-center">
-                <div class="col-md-6">
+                <div class="col-md-12">
                     <div class="home_select_country_flex">
                         <div class="left">
                             <h2>Our Products</h2>
@@ -86,19 +92,21 @@
 
     <div class="join_deal">
         <div class="container">
-            <table id="example" class="table table-striped table-bordered " >
-                <thead>
-                    <tr>
-                        <th>Product </th>
+
+        <div class="table-responsive t_box">
+                        <table id="campaign" class="table table-striped table-bordered">
+                            <thead>
+                                <tr>
+                                <th>Product </th>
                         <th>Date</th>
                         <th>Category</th>
                         <th>Product Image</th>
                         <th>Quantity Required</th>
                         <th>Status</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php foreach($join_deal as $value){?>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            <?php foreach($join_deal as $value){?>
                     <tr>
                         <td><?php echo $value['name']?> <br> <?php foreach($country as $val){ if($val['Country'] == $value['destination_country']){ echo $val['Country']; echo '<img class="flag_class" src="'.$val['Flag_image_url'].'">';}}?></td>
                         <td><?php echo $value['date']?></td>
@@ -109,18 +117,17 @@
                         <td><a href="<?php echo base_url()?>join-this-deal/<?php echo $value['id']?>"><button class="btn btn-primary">Make this Deal</button></a></td>
                     </tr>
                     <?php }?>
-                </tbody>
-            </table>
+                            </tbody>
+                        </table>
+                    </div>
+
+
+
+            
         </div>
     </div>
     
-    <script>
-$(document).ready(function() {
-    var table = $('#example').DataTable( {
-        fixedHeader: true
-    } );
-} );
-    </script>
+  
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
    
@@ -254,3 +261,10 @@ $(document).ready(function() {
    
            });
    </script>
+
+<script>
+    $(document).ready(function() {
+    $('#campaign').DataTable();
+} );
+
+</script>

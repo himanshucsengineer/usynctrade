@@ -13,7 +13,20 @@ $parts = basename($url);
 
 
 ?>
-
+<style>
+.custom-logo{
+    height:55px;
+}
+.slider_logo{
+    height:85px;
+}
+@media only screen and (max-width: 600px){
+    .user_desh .right{
+        width:100%;
+        padding:2rem 0rem;
+    }
+}
+</style>
 <header class="header-area bg-white main_head">
     <div class="navbar-area ">
         <div class="container">
@@ -22,7 +35,7 @@ $parts = basename($url);
                     <nav class="navbar navbar-expand-lg">
                         <div class="logo">
                             <a class="custom-logo-link " rel="home" href="<?php echo base_url()?>"><img width="90"
-                                    src="<?php echo base_url()?>assest/img/Digifever_logo.svg" alt="Digifever"
+                                    src="<?php echo base_url()?>assets/img/logo.png" alt="Digifever"
                                     class="custom-logo"></a>
                             <a class="navbar-brand" href="#" rel="home">
                             </a>
@@ -32,7 +45,7 @@ $parts = basename($url);
                         </div>
                         <div id="mySidenav" class="sidenav">
                             <a href="javascript:void(0)" id="close" class="closebtn" onclick="closeNav()">&times;</a>
-                            <center><img class="slider_logo" src="<?php echo base_url()?>assest/img/slider-logo.svg">
+                            <center><img class="slider_logo" src="<?php echo base_url()?>assets/img/logo.png">
                             </center>
                             <a href="<?php echo base_url()?>user/dashboard"><button class="<?php echo ($parts == 'dashboard') ? "active" : "" ?>"><span
                                         style="font-size:20px; margin-right:1.5rem;"><i class="fas fa-desktop"></i></span>My Dashboard</button></a>

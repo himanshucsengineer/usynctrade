@@ -12,7 +12,7 @@
     <div class="home_product">
         <div class="container-fluid">
             <div class="row justify-content-center">
-                <div class="col-md-6">
+                <div class="col-md-12">
                     <div class="home_select_country_flex">
                         <div class="left">
                             <h2>Our Products</h2>

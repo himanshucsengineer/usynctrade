@@ -6,7 +6,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>Welcome to Burger Hurbour</title>
+        <title>Welcome to Eximsure</title>
         <link href="<?php echo base_url(); ?>admin/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <link href="<?php echo base_url(); ?>admin/assets/css/core.css" rel="stylesheet" type="text/css" />
         <link href="<?php echo base_url(); ?>admin/assets/css/components.css" rel="stylesheet" type="text/css" />
@@ -43,7 +43,7 @@
         <div class="wrapper-page">
         <div class=" card-box card_box_custom">
         <div class="panel-heading">
-        <h3 class="text-center"> <img style="width: 100%;" src="<?php echo base_url(); ?>assest/img/burger_logo .svg" class="logo_head"/></h3>
+        <h3 class="text-center"> <img style="width: 100%;" src="<?php echo base_url(); ?>assets/img/logo.png" class="logo_head"/></h3>
         </div>
         <div class="panel-body">
         <?php

@@ -234,3 +234,34 @@
     padding: .3rem;
     text-align: center;
 }
+
+@media only screen and (max-width: 600px) {
+  .sez_top{
+    padding-top:2rem ;
+    padding-bottom: 2rem;
+  }
+  .sez_top h3{
+    text-align: center;
+    font-size: 25px;
+  }
+  .sez_top p{
+    text-align: center;
+    margin-top: 0rem;
+  }
+  .all_list .filter_section button{
+    margin-top: 1rem;
+  }
+  .custom_table{
+    overflow: auto;
+    overflow-x: scroll;
+  }
+  .custom_table .custome_head_flex .custome_head_card{
+    width: max-content;
+  }
+  .custom_table .custome_head_flex .custome_head_card h5{
+    font-size: 20px;
+  }
+  .custom_table .custome_body_flex .custom_body_card{
+    width: max-content;
+  }
+}

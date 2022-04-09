@@ -47,10 +47,8 @@
             <div class="row">
                 <div class="col-md-6">
                     <label for="">Budget</label>
-                    <select name="budget" id="">
-                        <option value="">Please Select Budget</option>
-                        <option value="0-10000">0-10000</option>
-                    </select>
+                    <input type="text" placeholder="Enter Your Budget" name="budget">
+                    
                 </div>
                 <div class="col-md-6">
                     <label for="">Currency</label>

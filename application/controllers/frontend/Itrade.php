@@ -57,7 +57,7 @@ class Itrade extends CI_controller
             foreach($data->result() as $row)
             {   
                 
-                $output .= '<div class="tab-pane Active" id="home1" role="tabpanel">
+                $output .= '<div class="tab-pane news active" id="home1" role="tabpanel">
                                 <div class="row">
                                     <div class="col-md-6 give_right_border">
                                         <ul class="text-left">
@@ -71,7 +71,7 @@ class Itrade extends CI_controller
                                     </div>
                                 </div>
                             </div>
-            <div class="tab-pane" id="profile1" role="tabpanel">
+            <div class="tab-pane duty" id="profile1" role="tabpanel">
                 <div class="row">
                     <div class="col-md-6 give_right_border">
                         
@@ -87,7 +87,7 @@ class Itrade extends CI_controller
                     </div>
                 </div>
             </div>
-            <div class="tab-pane" id="messages1" role="tabpanel">
+            <div class="tab-pane staticss" id="messages1" role="tabpanel">
                 <div class="row">
                     <div class="col-md-6 give_right_border">
                        
@@ -103,7 +103,7 @@ class Itrade extends CI_controller
                     </div>
                 </div>
             </div>
-            <div class="tab-pane" id="settings1" role="tabpanel">
+            <div class="tab-pane cost" id="settings1" role="tabpanel">
                 <div class="row">
                     <div class="col-md-6 give_right_border">
                         
@@ -119,7 +119,7 @@ class Itrade extends CI_controller
                     </div>
                 </div>
             </div>
-            <div class="tab-pane" id="settings2" role="tabpanel">
+            <div class="tab-pane today" id="settings2" role="tabpanel">
                 <div class="row">
                     <div class="col-md-6 give_right_border">
                        

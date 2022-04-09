@@ -49,8 +49,7 @@
                                     <div class="right">
                                         <p class="subbb">Reach us on our</p>
                                         <h2 class="h2_head base_heading_h2">Office</h2>
-                                        <p class="subbb">29, 2nd Cross, Gundappa Reddy Layout Cholanagar, R.T. Nagar
-                                            Post Bangalore 560032</p>
+                                        <p class="subbb">66/114 Heera Path Mansarovar Behind Dhanwantri Hospital, Jaipur. Rajasthan. 302020.</p>
                                     </div>
                                 </div>
                                 <div class="flex">

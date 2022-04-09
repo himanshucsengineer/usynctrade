@@ -216,6 +216,8 @@
     font-size:18px;
     margin-top:-.01rem;
 }
+
+
 </style>
 
 <?php if(!isset($_SESSION['email'])){
@@ -261,19 +263,7 @@
         -->
     </div>
 </div>
-<div class="top_nav">
-    <div class="container">
-        <div class="row">
-            
-            <div class="col-md-12">
-                <div class="text-right">
-                    <a href="<?php echo base_url()?>i-trade"><button>Trade Update</button></a>
-                    <a href="<?php echo base_url()?>sez_industry"><button>SEZ's Industries</button></a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+
     <header class="header-area bg-white main_header">
         <div class="navbar-area ">
             <div class="container">
@@ -292,21 +282,12 @@
                             <div id="navbarSupportedContent" class="collapse navbar-collapse sub-menu-bar">
                                 <ul id="nav" class="navbar-nav ml-auto " style="float:left;">
                                     <li class=" nav-item">
-                                        <a href="" class="nav-link">Category</a>
+                                    <a href="<?php echo base_url()?>i-trade"><button class="trade_up">Trade Update</button></a>
                                     </li>
                                     <li class=" nav-item">
-                                    <form action="<?php echo base_url()?>frontend/search/fetch_product" method="post">
-                                        <div class="serach_flex_nav">
-                                            <div class="left">
-                                                <input type="text" id="products" name="product" placeholder="Search Your Product" value="<?php echo $_SESSION['product']?>">
-                                            </div>
-                                            <div class="right">
-                                                <button class="search">Search</button>
-                                            </div>
-                                        </div>
-                                    </form>
+                                    <a href="<?php echo base_url()?>sez_industry"><button class="trade_up">SEZ's Industries</button></a>
                                     </li>
-                                    <?php echo $login?>
+                                    
                                 </ul>
                             </div>
                         </nav> <!-- navbar -->

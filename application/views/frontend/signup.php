@@ -1,11 +1,37 @@
 <link rel="stylesheet" href="<?php echo base_url()?>assets/css/login.css">
 </head>
 
-<?php $this->load->view('frontend/template/navbar')?>
-
+<?php $this->load->view('frontend/template/login_nav')?>
+<style>
+.signup_main{
+    background: url(assets/img/login_bg.jpg);
+       
+        height: 100%;
+        width: 100%;
+        background-size: 100% 100%;
+}
+.signup_main .card .signup_head{
+    margin:0rem !important;
+}
+.signup_main .card form{
+    margin-top:0rem;
+}
+.forgot{
+    float:right !important;
+}
+@media only screen and (max-width: 600px){
+    .signup_main .card{
+        background:white !important;
+        padding:1rem !important;
+        box-shadow:0px 4px 7px -2px rgb(0 0 0 / 20%) !important;
+        margin:4rem 0rem !important;
+    }
+    
+}
+</style>
 <div class="signup_main">
         <div class="container">
-            <div class="row justify-content-center">
+            <div class="row justify-content-end">
                 <div class="col-md-8">
                 <?php
         if ($this->session->flashdata('success')) {
@@ -16,12 +42,15 @@
         ?>
                     <div class="card">
                         <div class="signup_head">
-                            <img src="assets/img/register-stars.svg" alt="">
-                            <h2>Quick Signup</h2>
+                            
+                            
                         </div>
                         
                         <form action="<?php echo base_url()?>frontend/signup/create_user" method="POST">
-                            <label for="">Name</label>
+                            <div class="row">
+                                <di class="col-md-6">
+                                    <h4>Basic Details</h4>
+                                    <label for="">Name</label>
                             <input type="text" name="name" placeholder="Enter Your Name">
                             <label for="">Email</label>
                             <input type="email" name="email" placeholder="Enter Your Email">
@@ -49,18 +78,22 @@
                             <label for="">Confirm Password</label>
                             <input type="text" name="confirm_password" placeholder="Confirm Password">
 
-                            
-                            <label for="">Company Name</label>
+                                </di>
+                                <div class="col-md-6">
+                                    <h4>Company Details</h4>
+                                    <label for="">Company Name</label>
                             <input type="text" name="company_name" placeholder="Enter Your Company Name">
                             <label for="">Primary Business</label>
                             <select name="primary_business" id="">
                                 <option value="">Select Primary Business</option>
-                                <option value="Buying Agent"> Buying Agent</option>
-                                <option value="Manufacturer">Manufacturer</option>
-                                <option value="OEM dealer">OEM Dealer</option>
+                                <option value="Manufacturer/ OEM"> Manufacturer/ OEM</option>
+                                <option value="Importer / buying Agent">Importer / buying Agent</option>
+                                <option value="Exporter/ Supplier.">Exporter/ Supplier</option>
+                                <option value="Service Provider">Service Provider</option>
+                                <option value="Distributer/ Retailer/Reseller">Distributer/ Retailer/Reseller</option>
+                               
                             </select>
-                            <label for="">I'm a Supplier/Buyer of</label>
-                            <textarea name="company_details" id="" cols="30" rows="3" placeholder="Comapany Details"></textarea>
+                           
                             <label for="">Year Of Establishment</label>
                             <input type="text" name="establish_year" placeholder="Enter Establishment Year">
                             <label for="">GST/TAX Number</label>
@@ -74,6 +107,15 @@
                                 <option value="Owner">Owner</option>
                                 <option value="Agent">Agent</option>
                             </select>
+                            <label for="">I'm a Supplier/Buyer of</label>
+                            <textarea name="company_details" id="" cols="30" rows="10" placeholder="Comapany Details"></textarea>
+                                </div>
+                            </div>    
+                        
+                        
+                        
+                            
+                            
                            
 
 

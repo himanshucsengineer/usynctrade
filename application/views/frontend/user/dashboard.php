@@ -14,7 +14,7 @@
 
         <div class="right">
             <div class="container">
-            <h2>Welcome to Dashboard</h2>
+            <h2>Welcome to EximSure</h2>
 
             </div>
         </div>

@@ -185,8 +185,29 @@
                 <div class="col-md-6">
                     <select name="pieces" id="">
                         <option value="">Select Pieces</option>
+                        <option value="Bags">Bags</option>
+                        <option value="Dozens">Dozens</option>
+                        <option value="Meters">Meters</option>
+                        <option value="Metric Tons">Metric Tons</option>
+                        <option value="Pairs">Pairs</option>
+                        <option value="Packs">Packs</option>
                         <option value="Pieces">Pieces</option>
-                        <option value="Cartoon">Cartoon</option>
+                        <option value="Sets">Sets</option>
+                        <option value="Tons">Tons</option>
+                        <option value="Liters">Liters</option>
+                        <option value="Units">Units</option>
+                        <option value="Boxes">Boxes</option>
+                        <option value="Cartons">Cartons</option>
+                        <option value="Sheets">Sheets</option>
+                        <option value="Foot">Foot</option>
+                        <option value="Foughty foot Container">Foughty foot Container</option>
+                        <option value="Kilogram">Kilogram</option>
+                        <option value="Rolls">Rolls</option>
+                        <option value="Tonnes">Tonnes</option>
+                        <option value="Twenty Foot container">Twenty Foot container</option>
+                        <option value="Square foot">Square foot</option>
+                        <option value="Square Meter">Square Meter</option>
+                        <option value="Pound">Pound</option>
                     </select>
                 </div>
             </div>

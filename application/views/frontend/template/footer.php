@@ -41,7 +41,7 @@
                             <i class="fas iconnn fa-map-marker-alt"></i>
                         </div>
                         <div class="right">
-                            <p>Plot No- 329 Office No- 4 New Bhola Thakur Complex, Infront of National Public School Bhuidhara Samastipur, 848101</p>
+                            <p> 66/114 Heera Path Mansarovar Behind Dhanwantri Hospital, Jaipur. Rajasthan. 302020.</p>
                         </div>
                     </div>
                     <div class="subscribe_flex_2">
@@ -64,7 +64,7 @@
                 </div>
             </div>
             <hr class="style2">
-            <h6>@2021 Usynctrade ALL RIGHTS RESERVED. Developed By <a href="">Codevweb</a></h6>
+            <h6>@2021 Eximsure ALL RIGHTS RESERVED. Developed By <a href="">Codevweb</a></h6>
         </div>
     </div>
 

@@ -106,3 +106,17 @@
     margin-top: 0rem;
     line-height: 1.2;
 }
+
+
+
+@media only screen and (max-width: 600px) {
+    .contact_top{
+        padding: 2rem 0rem 7rem 0rem;
+    }
+    .contact_top h2{
+        font-size:30px;
+    }
+    .contactus{
+        padding: 2rem 0rem 1rem 0rem;
+    }
+  }

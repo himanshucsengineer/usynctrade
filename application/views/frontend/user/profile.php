@@ -55,9 +55,12 @@
                                 <input type="text" placeholder="company name" name="company_name" class="inpu" value="<?php echo $value["company_name"]?>">
                                 <select name="primary_business" class="inpu" id="">
                                     <option value="">Select Primary Business</option>
-                                    <option value="Buying Agent" <?php if("Buying Agent" == $value["primary_business"]){echo "selected";}else{"";}?>> Buying Agent</option>
-                                    <option value="Manufacturer" <?php if("Manufacturer" == $value["primary_business"]){echo "selected";}else{"";}?>>Manufacturer</option>
-                                    <option value="OEM dealer" <?php if("OEM dealer" == $value["primary_business"]){echo "selected";}else{"";}?>>OEM Dealer</option>
+                                    <option value="Manufacturer/ OEM" <?php if("Manufacturer/ OEM" == $value["primary_business"]){echo "selected";}else{"";}?>>Manufacturer/ OEM</option>
+                                    <option value="Importer / buying Agent" <?php if("Importer / buying Agent" == $value["primary_business"]){echo "selected";}else{"";}?>>Importer / buying Agent</option>
+                                    <option value="Exporter/ Supplier" <?php if("Exporter/ Supplier" == $value["primary_business"]){echo "selected";}else{"";}?>>Exporter/ Supplier</option>
+                                    <option value="Service Provider" <?php if("Service Provider" == $value["primary_business"]){echo "selected";}else{"";}?>>Service Provider</option>
+                                    <option value="Distributer/ Retailer/Reseller" <?php if("Distributer/ Retailer/Reseller" == $value["primary_business"]){echo "selected";}else{"";}?>>Distributer/ Retailer/Reseller</option>
+
                                 </select>
                                 
                                 <textarea name="company_details" class="inpu" id="" cols="30" rows="5"><?php echo $value['company_details']?></textarea>

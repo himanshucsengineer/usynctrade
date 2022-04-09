@@ -12,14 +12,14 @@
     display: flex;
 }
 .home_select_country_flex .left{
-    width: 50%;
+    width: 35%;
 }
 .home_select_country_flex .right{
-    width: 50%;
+    width: 65%;
     padding-top: 1rem;
 }
 .home_select_country_flex .right .inner_inner_flex{
-    width: 100%;
+    width: 50%;
     display: flex;
 }
 .home_select_country_flex .right .inner_inner_flex .inner_left{
@@ -60,7 +60,7 @@
     background-color: rgb(242, 247, 252);
 }
 .home_product h2{
-    text-align: center;
+    text-align: left;
     font-size: 30px;
     font-weight: 600 !important;
     line-height: 48px;
@@ -73,8 +73,8 @@
     height: 2px;
     background-color: #ff6a00;
     bottom: -10px;
-    width: 150px;
-    left: 50%;
+    width: 70px;
+    left: 40px;
     transform: translateX(-50%);
 }
 .home_product .main_card{
@@ -311,4 +311,27 @@
       border: 1px solid #cdcdcd;
       outline: none;
       margin-top: 1rem;
+  }
+
+
+  @media only screen and (max-width: 600px) {
+    .home_select_country_flex .left{
+      width: 100%;
+    }
+    .home_select_country_flex .right{
+      width: 100%;
+    }
+    .home_select_country_flex{
+      flex-wrap: wrap;
+    }
+    .home_select_country_flex .right .inner_inner_flex{
+      width: 100%;
+      margin-bottom: 3rem;
+    }
+    .home_product h2{
+      margin-bottom: 20px;
+    }
+    .home_product_flex .home_product_card{
+      width: 100%;
+    }
   }

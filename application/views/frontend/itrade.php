@@ -42,25 +42,25 @@
                 <ul class="nav nav-tabs nav-tabs-neutral justify-content-center" role="tablist"
                     data-background-color="orange">
                     <li class="nav-item">
-                        <a class="nav-link active" data-toggle="tab" href="#home1" role="tab">News-Notice</a>
+                        <a class="nav-link active" data-toggle="tab" id="news" href="" role="tab">News-Notice</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="tab" href="#profile1" role="tab">Duties & Certificates</a>
+                        <a class="nav-link" data-toggle="tab" href="" id="duty" role="tab">Duties & Certificates</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="tab" href="#messages1" role="tab">Statics-Data</a>
+                        <a class="nav-link" data-toggle="tab" href="" id="staticss" role="tab">Statics-Data</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="tab" href="#settings1" role="tab">Cost Calculation</a>
+                        <a class="nav-link" data-toggle="tab" href="" id="cost" role="tab">Cost Calculation</a>
                     </li>
 					<li class="nav-item">
-                        <a class="nav-link" data-toggle="tab" href="#settings2" role="tab">Today's Trends</a>
+                        <a class="nav-link" data-toggle="tab" href="" id="today" role="tab">Today's Trends</a>
                     </li>
                 </ul>
             </div>
             <div class="card-body">
                 <!-- Tab panes -->
-                <div class="tab-content text-center" id="dataList2">
+                <div class="tab-content text-center"  id="dataList2">
 
                     
                 </div>
@@ -74,7 +74,46 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
    
-    
+<script>
+$(document).ready(function(e){
+    $("#news").on("click",function(e){
+        $('.duty').hide();
+        $('.staticss').hide();
+        $('.cost').hide();
+        $('.today').hide();
+        $('.news').show();
+    });
+    $("#duty").on("click",function(e){
+        $('.duty').show();
+        $('.staticss').hide();
+        $('.cost').hide();
+        $('.today').hide();
+        $('.news').hide();
+    });
+    $("#staticss").on("click",function(e){
+        $('.duty').hide();
+        $('.staticss').show();
+        $('.cost').hide();
+        $('.today').hide();
+        $('.news').hide();
+    });
+    $("#cost").on("click",function(e){
+        $('.duty').hide();
+        $('.staticss').hide();
+        $('.cost').show();
+        $('.today').hide();
+        $('.news').hide();
+    });
+    $("#today").on("click",function(e){
+        $('.duty').hide();
+        $('.staticss').hide();
+        $('.cost').hide();
+        $('.today').show();
+        $('.news').hide();
+    });
+});
+
+</script>
 
    <script>
           

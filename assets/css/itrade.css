@@ -297,8 +297,7 @@ a:focus {
     .itrade_main_content .nav-tabs {
         display: inline-block;
         width: 100%;
-        padding-left: 100px;
-        padding-right: 100px;
+       
         text-align: center;
     }
 
@@ -314,6 +313,15 @@ a:focus {
     font-size: 25px !important;
 }
 
+
+@media screen and (max-width: 600px) {
+    .itrade_top_section .flex_top{
+        flex-wrap: wrap;
+    }
+    .itrade_top_section .flex_top .main_card{
+        width: 100%;
+    }
+}
 
 
 
