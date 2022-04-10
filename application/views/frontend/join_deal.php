@@ -5,6 +5,9 @@
         width:20px;
         margin-left:.5rem;
     }
+    .join_deal_image{
+        width:100%;
+    }
 </style>
 <?php $this->load->view('frontend/template/navbar')?>
 <?php 
@@ -19,9 +22,9 @@
     
 ?>
 <?php if(!isset($_SESSION['email'])){
-    $submit_button = '<a href="'.base_url().'signin" class="joib">Join this deal</a>';
+    $submit_button = '<a href="'.base_url().'signin" class="joib">Send message</a>';
 }else{
-    $submit_button ="<button>Join this deal</button>";
+    $submit_button ="<button>Send message</button>";
 }
     
     ?>
@@ -59,7 +62,7 @@
                     <p><?php echo $value['description']?></p>
                 </div>
                 <div class="col-md-4">
-                    
+                    <img class="join_deal_image" src="<?php echo base_url()?>upload/join_deal/<?php echo $value['image']?>" alt="">
                 </div>
             </div>
         </div>
@@ -75,7 +78,7 @@
             echo '<div class="alert alert-danger">' . $this->session->flashdata('error') . '</div>';
         }
         ?>
-    <h3>Join This Deal</h3>
+    <h3>Quote Now</h3>
     <div class="right_form">
        
     <form action="<?php echo base_url()?>frontend/join_deal/insert_data" method="post">

@@ -59,8 +59,8 @@
                                     <div class="right">
                                         <p class="subbb">Give us a</p>
                                         <h2 class="h2_head base_heading_h2">Call</h2>
-                                        <p class="subbb">+91 8050005101</p>
-                                        <p class="subbb">+91 8963006098</p>
+                                
+                                        <p class="subbb">+91 9950368363</p>
                                     </div>
                                 </div>
                                 <div class="flex">
@@ -70,7 +70,7 @@
                                     <div class="right">
                                         <p class="subbb">Drop On</p>
                                         <h2 class="h2_head base_heading_h2">Email</h2>
-                                        <p class="subbb">viren.dogman@gmail.com</p>
+                                        <p class="subbb">Customercare@eximsure.com</p>
                                     </div>
                                 </div>
                             </div>

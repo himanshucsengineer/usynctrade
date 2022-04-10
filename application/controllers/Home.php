@@ -20,6 +20,15 @@ class Home extends CI_controller
         $this->load->view('frontend/template/footer');
     }
 
+    public function set_import(){
+        $import = $this->input->post('import');
+        if($import == "import"){
+            redirect(base_url().'import');
+        }else{
+            redirect(base_url().'export');
+        }
+    }
+
     public function get_result(){
         $output = '';
         $this->load->model('admin/productmodel');

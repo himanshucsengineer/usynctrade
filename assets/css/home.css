@@ -46,7 +46,7 @@
 }
 .hero_section .carousel-item img{
     width: 100%;
-    height: 500px;
+    height: 450px;
     background: no-repeat center center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -314,6 +314,131 @@
   }
 
 
+  .hero_content_center{
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+    position: absolute;
+    top: 40%;
+  }
+ .hero_content_center .content_card_left{
+   width: 60%;
+   height: auto;
+   padding: 1rem;
+   background-color: #f5f3f388;
+   border-radius: 6px;
+ }
+
+ .hero_content_center .export_import_card_right{
+   width: 78%;
+   float: right;
+ }
+ .hero_content_center .export_import_card_right h3{
+  color:#00a9ea;
+  font-size: 28px;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif !important;
+}
+.hero_content_center .export_import_card_right p{
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  color: white;
+}
+.hero_content_center .export_import_card_right .input_text{
+  font-size: 20px;
+  font-weight: 300;
+  text-align: center;
+  color: white;
+}
+.hero_content_center .export_import_card_right button{
+  width: 80%;
+  height: auto;
+  padding: .5rem ;
+  background-color: #ff6a00;
+  border: none;
+  color: #ffffff;
+  outline: none;
+  margin-top: 1.5rem;
+}
+.right_bottom_button{
+  border: none;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0.169);
+  color: white;
+  padding: .5rem 1.5rem;
+  border-radius: 4px;
+  transition: .5s;
+  font-weight: 500;
+}
+.right_bottom_button:hover{
+  background-color: rgba(0, 0, 0, 0.449);
+  color: #00a9ea;
+}
+
+
+.join_deal{
+  width: 100%;
+  height: auto;
+  padding: 4rem 0rem;
+  background-color: white;
+}
+.join_deal h2{
+  text-align: left;
+  font-size: 30px;
+  font-weight: 600 !important;
+  line-height: 48px;
+  position: relative;
+  margin-bottom: 70px;
+}
+.join_deal h2::after{
+  position: absolute;
+  content: "";
+  height: 2px;
+  background-color: #ff6a00;
+  bottom: -10px;
+  width: 70px;
+  left: 40px;
+  transform: translateX(-50%);
+}
+.business_trus{
+  width: 100%;
+  height: auto;
+  padding: 4rem 0rem;
+  background-color: white;
+}
+.business_trus h2{
+  text-align: left;
+  font-size: 30px;
+  font-weight: 600 !important;
+  line-height: 48px;
+  position: relative;
+  margin-bottom: 70px;
+}
+.business_trus h2::after{
+  position: absolute;
+  content: "";
+  height: 2px;
+  background-color: #ff6a00;
+  bottom: -10px;
+  width: 70px;
+  left: 40px;
+  transform: translateX(-50%);
+}
+.business_trus .business_flex{
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+.business_trus .business_flex .img_card{
+  width: 20%;
+  height: auto;
+  padding: .5rem;
+}
+.business_trus .business_flex .img_card img{
+  width: 100%;
+  height: auto;
+}
   @media only screen and (max-width: 600px) {
     .home_select_country_flex .left{
       width: 100%;
@@ -334,4 +459,48 @@
     .home_product_flex .home_product_card{
       width: 100%;
     }
+    .business_trus .business_flex{
+      flex-wrap: wrap;
+    }
+    .business_trus .business_flex .img_card{
+      width: 50%;
+    }
+    .hero_content_center .content_card_left{
+      display: none;
+    }
+    .hero_content_center .export_import_card_right{
+      width: 100%;
+    }
+    .hero_content_center .export_import_card_right h3{
+      font-size: 18px;
+      text-align: center;
+    }
+    .nowrap{
+      flex-wrap: nowrap !important;
+    }
+    .hero_section .carousel-item img{
+      height:250px
+    }
+    .hero_content_center .export_import_card_right p{
+      font-size: 17px;
+      margin-bottom: 0rem;
+    }
+    .hero_content_center .export_import_card_right .input_text{
+      font-size:17px;
+      margin-bottom: 0rem;
+    }
+    .hero_content_center .export_import_card_right button{
+      width: 60%;
+      margin-top: .5rem;
+    }
+    .right_bottom_button{
+      font-weight: 400;
+      padding: .3rem 1rem;
+    }
+    .hero_content_center{
+      top:7rem;
+    }
   }
+
+
+  

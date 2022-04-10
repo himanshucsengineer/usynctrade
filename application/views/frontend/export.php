@@ -25,15 +25,50 @@
                     <input type="text" name="product_name" placeholder="Enter Product Name">
                     <label for="">Quantity</label>
                     <input type="text" name="quantity" placeholder="Enter Quantity">
-                    
                 </div>
                 <div class="col-md-6">
                     <label for="">Category</label>
                     <select name="category" id="">
                         <option value="">Select Category</option>
-                        <option value="Fruits">Fruits</option>
-                        <option value="Vegetables">Vegetables</option>
-                        <option value="Textile">Textile</option>
+                        <option value="Agriculture">Agriculture</option>
+                        <option value="Apparel & Clothing">Apparel & Clothing</option>
+                        <option value="Automobiles">Automobiles</option>
+                        <option value="Beauty & Personal Care">Beauty & Personal Care</option>
+                        <option value="Business Services">Business Services</option>
+                        <option value="Chemicals">Chemicals</option>
+                        <option value="Computer Hardware & Software">Computer Hardware & Software</option>
+                        <option value="Construction & Real Estate">Construction & Real Estate</option>
+                        <option value="Consumer Electronics">Consumer Electronics</option>
+                        <option value="Electrical & Electronics Supplies">Electrical & Electronics Supplies</option>
+                        <option value="Energy Products">Energy Products</option>
+                        <option value="Environment">Environment</option>
+                        <option value="Excess Inventory">Excess Inventory</option>
+                        <option value="Fashion Accessories">Fashion Accessories</option>
+                        <option value="Food & Beverage">Food & Beverage</option>
+                        <option value="Furniture">Furniture</option>
+                        <option value="Gifts & Crafts">Gifts & Crafts</option>
+                        <option value="Hardware & Mechanical Parts">Hardware & Mechanical Parts</option>
+                        <option value="Health & Medicines">Health & Medicines</option>
+                        <option value="Home & Garden">Home & Garden</option>
+                        <option value="Home Appliances">Home Appliances</option>
+                        <option value="Industrial Machinery">Industrial Machinery</option>
+                        <option value="Jewelry & Watches">Jewelry & Watches</option>
+                        <option value="Lights & Lighting">Lights & Lighting</option>
+                        <option value="Luggage & Bags">Luggage & Bags</option>
+                        <option value="Measurement Instruments">Measurement Instruments</option>
+                        <option value="Minerals & Metallurgy">Minerals & Metallurgy</option>
+                        <option value="Office & School Supplies">Office & School Supplies</option>
+                        <option value="Packaging & Printing">Packaging & Printing</option>
+                        <option value="Rubber & Plastics">Rubber & Plastics</option>
+                        <option value="Security & Protection">Security & Protection</option>
+                        <option value="Shoes & Footwear">Shoes & Footwear</option>
+                        <option value="Sports & Entertainment">Sports & Entertainment</option>
+                        <option value="Telecommunications">Telecommunications</option>
+                        <option value="Textile & Leather Products">Textile & Leather Products</option>
+                        <option value="Tools">Tools</option>
+                        <option value="Toys">Toys</option>
+                        <option value="Transportation">Transportation</option>
+                        <option value="Other">Other</option>
                     </select>
                     <label for="">Units</label>
                     <select name="units" id="">

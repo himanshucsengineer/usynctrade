@@ -98,6 +98,7 @@ width: 100%;
     width: 100%;
     height: auto;
     display: flex;
+    flex-wrap: wrap;
 }
 .company_image_flex .image_card{
     width:25%;
@@ -106,4 +107,12 @@ width: 100%;
 .company_image_flex .image_card img{
     width: 100%;
     height: 100px;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .company_image_flex .image_card{
+        width:100%;
+        padding: 1rem;
+    }
 }

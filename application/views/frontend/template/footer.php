@@ -49,7 +49,7 @@
                             <i class="far iconnn fa-envelope"></i>
                         </div>
                         <div class="right">
-                            <p>info@demo.com</p>
+                            <p>Customercare@eximsure.com</p>
                         </div>
                     </div>
                     <div class="subscribe_flex_2">
@@ -57,7 +57,7 @@
                             <i class="fas iconnn fa-phone"></i>
                         </div>
                         <div class="right">
-                            <p>+91 0000000000</p>
+                            <p>+91 9950368363</p>
                             
                         </div>
                     </div>

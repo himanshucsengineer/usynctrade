@@ -58,7 +58,9 @@
 
 
     @media only screen and (max-width: 600px) {
-        
+        .top_nav{
+            display:none;
+        }
         .side{
     display:block !important;
 }
@@ -241,6 +243,27 @@
     ';
     }
     ?>
+
+<?php if($_SESSION['email']){
+    $siderbar_login = '
+    <a href="'.base_url().'user/dashboard" ><button class="but">Dashboard</button></a>
+    <a href="'.base_url().'user/profile" ><button class="but">Profile & Setting</button></a>
+    <a href="'.base_url().'user/your_product" ><button class="but">Your Products</button></a>
+    <a href="'.base_url().'import" ><button class="but">Post by Leads</button></a>
+    <a href="'.base_url().'user/trade_inqury" ><button class="but">Trade Inqury</button></a>
+    <a href="'.base_url().'user/joindeal" ><button class="but">Join Deal Inqury</button></a>
+    <a href="'.base_url().'user/importdata" ><button class="but">Import Inqury Data</button></a>
+    <a href="'.base_url().'user/exportdata" ><button class="but">Export Inqury Data</button></a>
+    <a href="'.base_url().'frontend/logout" ><button class="but">Logout</button></a>
+    
+    
+    ';
+}else{
+    $siderbar_login = "";
+}
+
+
+?>
 <div class="bs-canvas-overlay bs-canvas-anim  position-fixed w-100 h-100"></div>
 
 <!-- Off-canvas sidebar markup, left/right or both. -->
@@ -249,6 +272,12 @@
         <button type="button" class="bs-canvas-close close clc" aria-label="Close"><span aria-hidden="true" >&times;</span></button>
       
         <a href="<?php echo base_url();?>" ><button class="but">Home</button></a>
+        <?php echo $siderbar_login?>
+        <a href="<?php echo base_url(); ?>contact-us" ><button class="but">Contact Us</button></a>
+        <a href="<?php echo base_url(); ?>i-trade" ><button class="but">Trade Update</button></a>
+        <a href="<?php echo base_url(); ?>sez_industry" ><button class="but">SEZ industry</button></a>
+        
+       
         <!-- <a href="<?php echo base_url(); ?>about-us" ><button class="but">About us</button></a>
         <a href="<?php echo base_url(); ?>service" ><button class="but">Service</button></a>
         <a href="<?php echo base_url(); ?>blogs" ><button class="but">Blog</button></a>
@@ -256,7 +285,7 @@
         <a href="<?php echo base_url(); ?>projects" ><button class="but">Projects</button></a>
         <a href="<?php echo base_url(); ?>career" ><button class="but">Career</button></a>
         <a href="<?php echo base_url(); ?>gallary" ><button class="but">Gallary</button></a>
-        <a href="<?php echo base_url(); ?>contact-us" ><button class="but">Contact Us</button></a>
+        
        <a href="<?php echo base_url(); ?>feedback" ><button class="but">Other</button></a>
         -->
     </div>
@@ -264,8 +293,10 @@
 <div class="top_nav">
     <div class="container">
         <div class="row">
-            
-            <div class="col-md-12">
+            <div class="col-md-6">
+                <p style="color:white; font-size:18px;">+91 9950368363 | Customercare@eximsure.com</p>
+            </div>
+            <div class="col-md-6">
                 <div class="text-right">
                     <a href="<?php echo base_url()?>i-trade"><button>Trade Update</button></a>
                     <a href="<?php echo base_url()?>sez_industry"><button>SEZ's Industries</button></a>
@@ -317,7 +348,7 @@
     </header>
     <!--Header End-->
     
-  
+    
     <script>
 jQuery(document).ready(function($) {
    var bsDefaults = {
