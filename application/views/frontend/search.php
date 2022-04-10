@@ -9,6 +9,7 @@
 <?php $this->load->view('frontend/template/navbar')?>
 
 
+<input type="hidden" value="<?php echo $_SESSION['cate_search']?>" id="cate">
     <div class="home_product">
         <div class="container-fluid">
             <div class="row justify-content-center">
@@ -70,7 +71,7 @@
                
                var country = document.getElementById("keywords").value;
                var product = document.getElementById("products").value;
-               
+               var cate = document.getElementById("cate").value;
                 var limit = 6;
                var start = 0;
                var action = 'inactive';
@@ -86,7 +87,7 @@
    
                lazzy_loader(limit);
    
-               function load_data2(limit, start, country,product) {
+               function load_data2(limit, start, country,product,cate) {
                    
                    $.ajax({
                        url: "<?php echo base_url(); ?>home/get_result",
@@ -96,6 +97,7 @@
                            start: start,
                            country: country,
                            product:product,
+                           cate:cate,
                        },
                        cache: false,
                        success: function(data) {
@@ -114,7 +116,7 @@
    
                if (action == 'inactive') {
                    action = 'active';
-                   load_data2(limit, start, country,product);
+                   load_data2(limit, start, country,product,cate);
                }
        
                $(window).scroll(function() {
@@ -123,7 +125,7 @@
                        action = 'active';
                        start = start + limit;
                        setTimeout(function() {
-                           load_data2(limit, start, country,product);
+                           load_data2(limit, start, country,product,cate);
                        }, 500);
                    }
                });
@@ -133,7 +135,7 @@
            $(document).ready(function() {
            var country = document.getElementById("keywords").value;
            var product = document.getElementById("products").value;
-        
+           var cate = document.getElementById("cate").value;
            var limit = 6;
            var start = 0;
            var action = 'inactive';
@@ -149,7 +151,7 @@
    
            lazzy_loader(limit);
    
-           function load_data(limit, start, country,product) {
+           function load_data(limit, start, country,product,cate) {
                $.ajax({
                    url: "<?php echo base_url(); ?>home/get_result",
                    method: "POST",
@@ -158,6 +160,7 @@
                        start: start,
                        country: country,
                        product:product,
+                       cate:cate,
                    },
                    cache: false,
                    success: function(data) {
@@ -176,7 +179,7 @@
    
            if (action == 'inactive') {
                action = 'active';
-               load_data(limit, start,country,product);
+               load_data(limit, start,country,product,cate);
            }
           
            $(window).scroll(function() {
@@ -185,7 +188,7 @@
                    action = 'active';
                    start = start + limit;
                    setTimeout(function() {
-                       load_data(limit, start,country,product);
+                       load_data(limit, start,country,product,cate);
                    }, 500);
                }
            });

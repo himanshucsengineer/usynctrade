@@ -116,7 +116,7 @@
                         
                             
                             
-                           
+                           <input type="checkbox" name="" id=""> By joining, I Agree to <a href="https://eximsure.com/">eximsure.com</a> Terms & condition, Privacy Policy & Receive Emails Related to Our Services.
 
 
                             <p>Already Have An Account? <a href="<?php echo base_url()?>signin">Login</a></p>

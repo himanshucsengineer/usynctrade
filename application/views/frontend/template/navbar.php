@@ -218,6 +218,21 @@
     font-size:18px;
     margin-top:-.01rem;
 }
+
+.ucinssss{
+    margin-right:.5rem !important;
+    color:#00a9ea !important;
+    font-size:20px !important;
+}
+.dfdfd{
+    transition:.5s !important;
+}
+.dfdfd:hover{
+    color:#ff6a00 !important;
+}
+.nav-link:hover{
+    color:#ff6a00 !important;
+}
 </style>
 
 <?php if(!isset($_SESSION['email'])){
@@ -228,15 +243,15 @@
         $login = '<li class=" dropdown nav-item">
         <a href="" class="nav-link dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">'.$_SESSION['name'].'</a>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="'.base_url().'user/dashboard">Dashboard</a>
-            <a class="dropdown-item" href="'.base_url().'user/profile">Profile & Setting</a>
-            <a class="dropdown-item" href="'.base_url().'user/your_product">Your Products</a>
-            <a class="dropdown-item" href="'.base_url().'import">Post by Leads</a>
-            <a class="dropdown-item" href="'.base_url().'user/trade_inqury">Trade Inqury</a>
-            <a class="dropdown-item" href="'.base_url().'user/joindeal">Join Deal Inqury</a>
-            <a class="dropdown-item" href="'.base_url().'user/importdata">Import Inqury Data</a>
-            <a class="dropdown-item" href="'.base_url().'user/exportdata">Export Inqury Data</a>
-            <a class="dropdown-item" href="'.base_url().'frontend/logout">Logout</a>
+            <a class="dropdown-item dfdfd" href="'.base_url().'user/dashboard"><span class="ucinssss"><i class="fas fa-desktop"></i></span> Dashboard</a>
+            <a class="dropdown-item dfdfd" href="'.base_url().'user/profile"><span class="ucinssss"><i class="fa fa-user"></i></span> Profile & Setting</a>
+            <a class="dropdown-item dfdfd" href="'.base_url().'user/your_product"><span class="ucinssss"><i class="fas fa-tasks"></i></span> Your Products</a>
+            <a class="dropdown-item dfdfd" href="'.base_url().'import"><span class="ucinssss"><i class="fas fa-cart-arrow-down"></i></span> Post by Leads</a>
+            <a class="dropdown-item dfdfd" href="'.base_url().'user/trade_inqury"><span class="ucinssss"><i class="fas fa-bell"></i></span> Trade Inqury</a>
+            <a class="dropdown-item dfdfd" href="'.base_url().'user/joindeal"><span class="ucinssss"><i class="fas fa-bell"></i></span> Join Deal Inqury</a>
+            <a class="dropdown-item dfdfd" href="'.base_url().'user/importdata"><span class="ucinssss"><i class="fas fa-bell"></i></span> Import Inqury Data</a>
+            <a class="dropdown-item dfdfd" href="'.base_url().'user/exportdata"><span class="ucinssss"><i class="fas fa-bell"></i></span> Export Inqury Data</a>
+            <a class="dropdown-item dfdfd" href="'.base_url().'frontend/logout"><span class="ucinssss"><i class="fas fa-sign-out-alt"></i></span> Logout</a>
         </div>
         </li>
     
@@ -246,13 +261,13 @@
 
 <?php if($_SESSION['email']){
     $siderbar_login = '
-    <a href="'.base_url().'user/dashboard" ><button class="but">Dashboard</button></a>
-    <a href="'.base_url().'user/profile" ><button class="but">Profile & Setting</button></a>
-    <a href="'.base_url().'user/your_product" ><button class="but">Your Products</button></a>
-    <a href="'.base_url().'import" ><button class="but">Post by Leads</button></a>
-    <a href="'.base_url().'user/trade_inqury" ><button class="but">Trade Inqury</button></a>
-    <a href="'.base_url().'user/joindeal" ><button class="but">Join Deal Inqury</button></a>
-    <a href="'.base_url().'user/importdata" ><button class="but">Import Inqury Data</button></a>
+    <a href="'.base_url().'user/dashboard" ><button class="but"> Dashboard</button></a>
+    <a href="'.base_url().'user/profile" ><button class="but"> Profile & Setting</button></a>
+    <a href="'.base_url().'user/your_product" ><button class="but"> Your Products</button></a>
+    <a href="'.base_url().'import" ><button class="but"> Post by Leads</button></a>
+    <a href="'.base_url().'user/trade_inqury" ><button class="but"> Trade Inqury</button></a>
+    <a href="'.base_url().'user/joindeal" ><button class="but"> Join Deal Inqury</button></a>
+    <a href="'.base_url().'user/importdata" ><button class="but"> Import Inqury Data</button></a>
     <a href="'.base_url().'user/exportdata" ><button class="but">Export Inqury Data</button></a>
     <a href="'.base_url().'frontend/logout" ><button class="but">Logout</button></a>
     
@@ -273,6 +288,22 @@
       
         <a href="<?php echo base_url();?>" ><button class="but">Home</button></a>
         <?php echo $siderbar_login?>
+        <div class="dropdown">
+                                    <?php
+							            $category=Utility::getcategory();
+							        ?>   
+                                        <a href="" class="but" id="dropdownMenuButto" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Category</a>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButto">
+                                            <?php foreach($category as $cate){?>
+                                            <form action="<?php echo base_url()?>frontend/search/fetch_category" method="post">
+                                            <input type="hidden" value="<?php echo $cate['cate_name']?>" name="cate">    
+                                
+                                                <input type="submit" class="dropdown-item" value="<?php echo $cate['cate_name']?>">
+                                            </form>
+                                            <?php }?>
+                                        </div>
+                                    
+                                            </div>
         <a href="<?php echo base_url(); ?>contact-us" ><button class="but">Contact Us</button></a>
         <a href="<?php echo base_url(); ?>i-trade" ><button class="but">Trade Update</button></a>
         <a href="<?php echo base_url(); ?>sez_industry" ><button class="but">SEZ industry</button></a>
@@ -322,9 +353,23 @@
                             </div>
                             <div id="navbarSupportedContent" class="collapse navbar-collapse sub-menu-bar">
                                 <ul id="nav" class="navbar-nav ml-auto " style="float:left;">
-                                    <li class=" nav-item">
-                                        <a href="" class="nav-link">Category</a>
+                                    <li class="dropdown nav-item">
+                                    <?php
+							            $category=Utility::getcategory();
+							        ?>   
+                                        <a href="" class="nav-link " id="dropdownMenuButto" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Category</a>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButto">
+                                            <?php foreach($category as $cate){?>
+                                            <form action="<?php echo base_url()?>frontend/search/fetch_category" method="post">
+                                            <input type="hidden" value="<?php echo $cate['cate_name']?>" name="cate">    
+                                
+                                                <input type="submit" class="dropdown-item" value="<?php echo $cate['cate_name']?>">
+                                            </form>
+                                            <?php }?>
+                                        </div>
+                                    
                                     </li>
+                                  
                                     <li class=" nav-item">
                                     <form action="<?php echo base_url()?>frontend/search/fetch_product" method="post">
                                         <div class="serach_flex_nav">

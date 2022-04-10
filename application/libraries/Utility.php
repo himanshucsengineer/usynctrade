@@ -9,6 +9,18 @@
             return $getSearchsocial;
 
         }
+
+
+        public static function getcategory(){
+            $CI =& get_instance();
+
+            $CI->db->select('*')->from('product_cate');
+            $getSearchsocial = $CI->db->get()->result_array();
+            return $getSearchsocial;
+
+        }
+
+
         public static function sitedata(){
             $CI =& get_instance();
             $CI->db->select('*')->from('site_setting');

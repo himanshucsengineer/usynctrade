@@ -75,7 +75,7 @@
 
 
 <div class="hero_content_center">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-md">
                 <div class="content_card_left">
@@ -110,12 +110,12 @@
 </div>
 
 <div class="home_product">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-md-12">
                 <div class="home_select_country_flex">
                     <div class="left">
-                        <h2>Our Products</h2>
+                        <h2>Latest Products</h2>
                     </div>
                     <div class="right">
                         <div class="inner_inner_flex">
@@ -158,8 +158,8 @@
 
 
 <div class="join_deal">
-    <div class="container">
-        <h2>Join Deal</h2>
+    <div class="container-fluid">
+        <h2>Latest By Offers</h2>
         <div class="table-responsive t_box">
             <table id="example" class="table table-striped table-bordered dt-responsive nowrap" style="width:100%">
                 <thead>
@@ -205,7 +205,7 @@
 
 
 <div class="business_trus">
-    <div class="container">
+    <div class="container-fluid">
         <h2>BUSINESSES TRUST ON US</h2>
          <div class="business_flex logo_slider">
              <div class="img_card">
@@ -254,7 +254,7 @@
     </div>
 </div>
 <div class="business_trus">
-    <div class="container">
+    <div class="container-fluid">
         <h2>OUR TRADE SERVICES PARTNERS</h2>
          <div class="business_flex ">
              <div class="img_card">

@@ -34,16 +34,32 @@ class Home extends CI_controller
         $this->load->model('admin/productmodel');
         $country=$this->joindealmodel->fetch_country();
         
-        if(empty($this->input->post('country')) && !empty($this->input->post('product'))){
+        if(empty($this->input->post('country')) && !empty($this->input->post('product')) && empty($this->input->post('cate'))){
             $product =  $this->input->post('product');
             $data = $this->productmodel->filter_basesd_product($this->input->post('limit'), $this->input->post('start'), $product);
-        }elseif(!empty($this->input->post('country')) && empty($this->input->post('product'))){
+        }elseif(!empty($this->input->post('country')) && empty($this->input->post('product')) && empty($this->input->post('cate'))){
              $country= $this->input->post('country');
             $data = $this->productmodel->filter_basesd_country($this->input->post('limit'), $this->input->post('start'), $country);
-        }elseif(!empty($this->input->post('country')) && !empty($this->input->post('product'))){
+        }elseif(empty($this->input->post('country')) && empty($this->input->post('product')) && !empty($this->input->post('cate'))){
+            $cate= $this->input->post('cate');
+            $data = $this->productmodel->filter_basesd_category($this->input->post('limit'), $this->input->post('start'), $cate);
+        }elseif(!empty($this->input->post('country')) && empty($this->input->post('product')) && !empty($this->input->post('cate'))){
+            $country= $this->input->post('country');
+            $cate =  $this->input->post('cate');
+            $data = $this->productmodel->filter_basesd_on_country_cate($this->input->post('limit'), $this->input->post('start'), $country, $cate);
+        }elseif(!empty($this->input->post('country')) && !empty($this->input->post('product')) && empty($this->input->post('cate'))){
             $country= $this->input->post('country');
             $product =  $this->input->post('product');
-            $data = $this->productmodel->filter_basesd_on_both($this->input->post('limit'), $this->input->post('start'), $country, $product);
+            $data = $this->productmodel->filter_basesd_on_country_product($this->input->post('limit'), $this->input->post('start'), $country, $product);
+        }elseif(empty($this->input->post('country')) && !empty($this->input->post('product')) && !empty($this->input->post('cate'))){
+            $cate= $this->input->post('cate');
+            $product =  $this->input->post('product');
+            $data = $this->productmodel->filter_basesd_on_cate_product($this->input->post('limit'), $this->input->post('start'), $cate, $product);
+        }elseif(!empty($this->input->post('country')) && !empty($this->input->post('product')) && !empty($this->input->post('cate'))){
+            $cate= $this->input->post('cate');
+            $product =  $this->input->post('product');
+            $country =  $this->input->post('country');
+            $data = $this->productmodel->filter_basesd_on_cate_product_country($this->input->post('limit'), $this->input->post('start'), $cate, $product,$country);
         }else{
             $data = $this->productmodel->fetch_all_data($this->input->post('limit'), $this->input->post('start'));
         }

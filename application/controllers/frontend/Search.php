@@ -25,4 +25,10 @@ class Search extends CI_controller
         $_SESSION['product'] = $product;
         redirect(base_url().'search');
     }
+
+    public function fetch_category(){
+        $cate = $this->input->post('cate'); 
+        $_SESSION['cate_search'] = $cate;
+        redirect(base_url().'search');
+    }
 }

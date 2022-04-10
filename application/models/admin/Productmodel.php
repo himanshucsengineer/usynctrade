@@ -78,8 +78,61 @@ class Productmodel extends CI_Model
     $query = $this->db->get();
     return $query;
 }
-function filter_basesd_on_both($limit, $start, $country,$product){
+
+function filter_basesd_category($limit, $start, $cate){
+  $this->db->select("*");
+  $this->db->from("product");
+
+  $this->db->where("category LIKE '%$cate%'");
+  $this->db->order_by("id", "DESC");
+  $this->db->limit($limit, $start);
+  $query = $this->db->get();
+  return $query;
+}
+
+function filter_basesd_on_country_cate($limit, $start, $country,$cate){
+  $array = array('origin_place' => $country, 'category' => $cate);
+  $this->db->select("*");
+  $this->db->from("product");
+
+  $this->db->like($array);
+  $this->db->order_by("id", "DESC");
+  $this->db->limit($limit, $start);
+  $query = $this->db->get();
+  return $query;
+  
+}
+
+function filter_basesd_on_country_product($limit, $start, $country,$product){
   $array = array('origin_place' => $country, 'name' => $product);
+  $this->db->select("*");
+  $this->db->from("product");
+
+  $this->db->like($array);
+  $this->db->order_by("id", "DESC");
+  $this->db->limit($limit, $start);
+  $query = $this->db->get();
+  return $query;
+  
+}
+
+function filter_basesd_on_cate_product_country($limit, $start, $cate,$product,$country){
+  $array = array('category' => $cate, 'name' => $product,'origin_place' => $country);
+  $this->db->select("*");
+  $this->db->from("product");
+
+  $this->db->like($array);
+  $this->db->order_by("id", "DESC");
+  $this->db->limit($limit, $start);
+  $query = $this->db->get();
+  return $query;
+  
+}
+
+
+
+function filter_basesd_on_cate_product($limit, $start, $cate,$product){
+  $array = array('category' => $cate, 'name' => $product);
   $this->db->select("*");
   $this->db->from("product");
 
