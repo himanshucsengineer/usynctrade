@@ -43,4 +43,18 @@ class Usermodel extends CI_Model
        $this->db->where('email',$email);
         $this->db->update('user');
     }
+    
+    function update_profile_status($final_email ){
+        $data = array(
+         
+          
+          'email' => $final_email,
+          'status' => 1,
+        
+        );
+                   
+       $this->db->set($data);
+       $this->db->where('email',$final_email);
+        $this->db->update('user');
+    }
 }

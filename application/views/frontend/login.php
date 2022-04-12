@@ -61,7 +61,7 @@
                                 <input type="email" name="email" placeholder="Enter Your Email">
                                 <label for="">Password</label>
                                 <input type="password" name="password" placeholder="Enter Your Password">
-                                <p>New User? <a href="<?php echo base_url()?>register">Signup</a> <span class="forgot"><a href="">Forgot password</a></span></p>
+                                <p>New User? <a href="<?php echo base_url()?>register">Signup</a> <span class="forgot"><a href="<?php echo base_url()?>forget_password">Forgot password</a></span></p>
                         
                                 <button id="login_butt">Login</button>
                             </form>

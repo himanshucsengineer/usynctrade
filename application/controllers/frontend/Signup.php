@@ -22,6 +22,9 @@ class Signup extends CI_controller
 
     public function create_user()
     {
+        
+        $SixDigitRandomNumber = rand(100000,999999);
+        
         $this->load->model('frontend/Usermodel');
         $this->input->post('formSubmit');
         $this->form_validation->set_rules('name', 'Name', 'required');
@@ -42,7 +45,13 @@ class Signup extends CI_controller
         $this->form_validation->set_rules('gst_no', 'gst_no', 'required');
         $this->form_validation->set_rules('company_certification', 'company_certification', 'required');
         $this->form_validation->set_rules('role_comapny', 'role_comapny', 'required');
-
+        
+        $from = "verify@eximsure.com";
+        $to = $this->input->post('email');
+        $subject = "Verify Account";
+        $message = "Your Account Verification OTP Is: $SixDigitRandomNumber ";
+        $headers = "From:" . $from;
+        
         if ($this->form_validation->run()) {
 
             if($this->input->post('password') == $this->input->post('confirm_password')){
@@ -50,7 +59,7 @@ class Signup extends CI_controller
                     'name' =>$this->input->post('name'),
                     'email' =>$this->input->post('email'),
                     'number' =>$this->input->post('number'),
-                    'password' => md5($this->input->post('password')),
+                    'password' => $this->input->post('password'),
 
                     'address' =>$this->input->post('address'),
                     'city' =>$this->input->post('city'),
@@ -64,12 +73,13 @@ class Signup extends CI_controller
                     'gst_no' =>$this->input->post('gst_no'),
                     'company_certification' =>$this->input->post('company_certification'),
                     'role_comapny' =>$this->input->post('role_comapny'),
-                    
+                    'otp' =>$SixDigitRandomNumber,
                 );
-                if ($this->Usermodel->insert_data($data)) {
-
-                    $this->session->set_flashdata('success', 'Your Account is succussfully Created! Please login to go to dashboard.');
-                    redirect(base_url() . 'signin');
+                if (mail($to,$subject,$message, $headers)) {
+                    $this->Usermodel->insert_data($data);
+                    $_SESSION['verify_email'] = $this->input->post('email');
+                    $this->session->set_flashdata('success', 'We Have Sent An Email For Account Verification');
+                    redirect(base_url() . 'verification');
                 } else {
     
                     $this->session->set_flashdata('error', 'Error In Submission');

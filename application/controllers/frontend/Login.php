@@ -28,8 +28,8 @@ class Login extends CI_controller
             'password' => $this->input->post('password'),
         );
         foreach ($model_data as $value) {
-            if ((strtolower($value['email']) == strtolower($user_data['email'])) && ($value['password'] == md5($user_data['password']))) {
-
+            if ((strtolower($value['email']) == strtolower($user_data['email'])) && ($value['password'] == $user_data['password'])) {
+                if($value['status'] == 1){
                 $_SESSION["email"] = $value["email"];
                 $_SESSION["name"] = $value["name"];
                 $_SESSION["number"] = $value["number"];
@@ -43,6 +43,10 @@ class Login extends CI_controller
                 
                 $login_success = 1;
                 break;
+                }else{
+                    $this->session->set_flashdata('error', 'Your Account Is Not verified');
+                    redirect(base_url() . 'signin');
+                }
             }
         }
         if ($login_success == 1) {
