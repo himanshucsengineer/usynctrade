@@ -8,6 +8,13 @@
     .join_deal_image{
         width:100%;
     }
+    .product_desction{
+        width:100%;
+        height:auto;
+        padding:2rem;
+        border-radius:10px;
+        box-shadow: 0px 4px 9px 0px #d3d4d6;
+    }
 </style>
 <?php $this->load->view('frontend/template/navbar')?>
 <?php 
@@ -59,7 +66,10 @@
                         </div>
                     </div>
                     <h4>Product Desicription:</h4>
+                    <div class="product_desction">
+                    
                     <p><?php echo $value['description']?></p>
+                    </div>
                 </div>
                 <div class="col-md-4">
                     <img class="join_deal_image" src="<?php echo base_url()?>upload/join_deal/<?php echo $value['image']?>" alt="">
@@ -90,8 +100,8 @@
         <input type="text" name="product_origin" placeholder="Please Enter Product Origin">
         <label for="">Offer Price</label>
         <input type="text" name="offer_price" placeholder="enter offered Price">
-        <label for="">Comapny Name</label>
-        <input type="text" name="company_name" placeholder="Enter Company Name">
+        
+        <input type="hidden" name="company_name" value="<?php echo $_SESSION['company_name']?>" placeholder="Enter Company Name">
         <?php echo $submit_button?>
         
     </form>

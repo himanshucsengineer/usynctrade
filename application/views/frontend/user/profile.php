@@ -31,13 +31,9 @@
                             <form action="<?php echo base_url()?>frontend/login/update_pro" id="profileupdateform"
                                 method="POST" accept-charset="utf-8">
                                 <div class="row">
-                                    <div class="col-md-12">
+                                    <div class="col-md-6">
                                         <input class="inpu" type="text" name="name" placeholder=" Name" value="<?php echo $value["name"]?>">
-                                    </div>
-                                    
-                                </div>
-                               
-                                <input class="inpu" type="email" name="email" placeholder="Email"
+                                        <input class="inpu" type="email" name="email" placeholder="Email"
                                     value="<?php echo $value["email"]?>" readonly>
                                 <input class="inpu" type="number" name="number" placeholder="Mobile Number"
                                     value="<?php echo $value["number"]?>">
@@ -52,7 +48,10 @@
                                 </select>
                                 
                                 <input type="text" placeholder="zip code" name="zip_code" class="inpu" value="<?php echo $value["zip_code"]?>">
-                                <input type="text" placeholder="company name" name="company_name" class="inpu" value="<?php echo $value["company_name"]?>">
+                                    </div>
+                                    
+                                    <div class="col-md-6">
+                                       <input type="text" placeholder="company name" name="company_name" class="inpu" value="<?php echo $value["company_name"]?>">
                                 <select name="primary_business" class="inpu" id="">
                                     <option value="">Select Primary Business</option>
                                     <option value="Manufacturer/ OEM" <?php if("Manufacturer/ OEM" == $value["primary_business"]){echo "selected";}else{"";}?>>Manufacturer/ OEM</option>
@@ -63,7 +62,7 @@
 
                                 </select>
                                 
-                                <textarea name="company_details" class="inpu" id="" cols="30" rows="5"><?php echo $value['company_details']?></textarea>
+                                <textarea name="company_details" class="inpu" id="" cols="30" rows="3"><?php echo $value['company_details']?></textarea>
                                 <input type="text" placeholder="establish year" name="establish_year" class="inpu" value="<?php echo $value["establish_year"]?>">
                                 <input type="text" placeholder="gst no" name="gst_no" class="inpu" value="<?php echo $value["gst_no"]?>">
                                 <input type="text" placeholder="company_certification" name="company_certification" class="inpu" value="<?php echo $value["company_certification"]?>">
@@ -74,6 +73,12 @@
                                     <option value="Owner" <?php if("Owner" == $value["role_comapny"]){echo "selected";}else{"";}?>>Owner</option>
                                     <option value="Agent" <?php if("Agent" == $value["role_comapny"]){echo "selected";}else{"";}?>>Agent</option>
                                 </select>
+                                    </div>
+                                    
+                                </div>
+                               
+                                
+                                
 
 
                                <button>Update</button>

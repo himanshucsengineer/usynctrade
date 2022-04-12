@@ -10,6 +10,8 @@ class Home extends CI_controller
 
     public function index()
     {
+         unset($_SESSION['cate_search']);
+         unset($_SESSION['product']);
 
         $data['country']=$this->joindealmodel->fetch_country();
         $data['join_deal']=$this->joindealmodel->fetchinventory_api();
@@ -24,8 +26,10 @@ class Home extends CI_controller
         $import = $this->input->post('import');
         if($import == "import"){
             redirect(base_url().'import');
-        }else{
+        }elseif($import == "export"){
             redirect(base_url().'export');
+        }else{
+             redirect(base_url());
         }
     }
 

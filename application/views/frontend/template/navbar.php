@@ -27,12 +27,45 @@
   display: block;
   padding:.7rem !important;
 }
+.dropdown:hover > .dropdown-menu {
+  display: block;
+}
 
+.dropdown > .dropdown-toggle:active {
+  /*Without this, clicking will make it sticky*/
+  pointer-events: none;
+}
 .dropdown-content a:hover {background-color: #ffffff; color:#011950 !important;}
 
 .dropdown:hover .dropdown-content {display: block;}
-
+.serahc_cicon{
+    display:none;
+}
+.search_bar_class{
+    display:none;
+}
 @media only screen and (max-width: 600px) {
+    .serahc_cicon{
+    display:block;
+    margin-right: -2rem;
+    color:#ff6a00;
+    cursor:pointer;
+}
+.search_bar_class{
+    display:block;
+    width:100%;
+    height:auto;
+    position:absolute;
+    z-index:2;
+    padding:.5rem;
+    background-color:white;
+    border:1px solid #cdcdcd;
+    
+}
+.search_bar_class .serach_flex_nav{
+    width:100% !important;
+    margin:0px !important;
+}
     .header_top .flex_top_first .left_first{
         width:100%;
     }
@@ -199,7 +232,7 @@
     width:100%;
     height:auto;
     padding:.5rem 1rem;
-    border:1px solid #cdcdcd;
+    border:1px solid #ff6a00;
     border-radius:25px 0px 0px 25px;
     outline:none
 }
@@ -233,15 +266,30 @@
 .nav-link:hover{
     color:#ff6a00 !important;
 }
+.login_button_nav{
+    padding:.5rem 1rem;
+    outline:none;
+    background-color:#ff6a00;
+    color:#fff;
+    border:1px solid #ff6a00;
+    border-radius:5px;
+    transition:.5s;
+}
+.login_button_nav:hover{
+    background-color:#fff;
+    color:#ff6a00;
+    border:1px solid #ff6a00;
+    border-radius:25px;
+}
 </style>
 
 <?php if(!isset($_SESSION['email'])){
         $login = '<li class=" nav-item">
-        <a href="'.base_url().'signin" class="nav-link " >Login / Signup</a>
+        <a href="'.base_url().'signin" class=" " ><button class="login_button_nav"><i class="fas fa-users"></i> Login/Signup</button></a>
     </li>';
     }else{
         $login = '<li class=" dropdown nav-item">
-        <a href="" class="nav-link dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">'.$_SESSION['name'].'</a>
+       <button data-toggle="dropdown"  id="dropdownMenuButton" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle login_button_nav"><i class="fas fa-users"></i> '.$_SESSION['name'].'</button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
             <a class="dropdown-item dfdfd" href="'.base_url().'user/dashboard"><span class="ucinssss"><i class="fas fa-desktop"></i></span> Dashboard</a>
             <a class="dropdown-item dfdfd" href="'.base_url().'user/profile"><span class="ucinssss"><i class="fa fa-user"></i></span> Profile & Setting</a>
@@ -274,7 +322,7 @@
     
     ';
 }else{
-    $siderbar_login = "";
+    $siderbar_login = '<a href="'.base_url().'signin" ><button class="but">Login/Signup</button></a>';
 }
 
 
@@ -288,11 +336,11 @@
       
         <a href="<?php echo base_url();?>" ><button class="but">Home</button></a>
         <?php echo $siderbar_login?>
-        <div class="dropdown">
+       
                                     <?php
 							            $category=Utility::getcategory();
 							        ?>   
-                                        <a href="" class="but" id="dropdownMenuButto" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Category</a>
+                                        <div  class="dropdown" style="width:100%;" ><button class="but " id="dropdownMenuButto" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Category</button>
                                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButto">
                                             <?php foreach($category as $cate){?>
                                             <form action="<?php echo base_url()?>frontend/search/fetch_category" method="post">
@@ -302,8 +350,8 @@
                                             </form>
                                             <?php }?>
                                         </div>
-                                    
-                                            </div>
+                                    </div>
+                                      
         <a href="<?php echo base_url(); ?>contact-us" ><button class="but">Contact Us</button></a>
         <a href="<?php echo base_url(); ?>i-trade" ><button class="but">Trade Update</button></a>
         <a href="<?php echo base_url(); ?>sez_industry" ><button class="but">SEZ industry</button></a>
@@ -347,17 +395,20 @@
                                         src="<?php echo base_url()?>assets/img/logo.png" alt="" class="custom-logo"></a>
                                 <a class="navbar-brand" href="#" rel="home"></a>
                             </div>
-                            
+                            <div class="text-right serahc_cicon">
+                                <span id="serach_bu"><i class="fas fa-search"></i></span> <span id="close_bu"><i class="fas fa-times"></i></span>
+                            </div>
                             <div class="bs-offset-main bs-canvas-anim ">
                                 <button class="side"  data-toggle="canvas" data-target="#bs-canvas-left" aria-expanded="false" aria-controls="bs-canvas-left">&#9776;</button>
                             </div>
+                            
                             <div id="navbarSupportedContent" class="collapse navbar-collapse sub-menu-bar">
                                 <ul id="nav" class="navbar-nav ml-auto " style="float:left;">
                                     <li class="dropdown nav-item">
                                     <?php
 							            $category=Utility::getcategory();
 							        ?>   
-                                        <a href="" class="nav-link " id="dropdownMenuButto" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Category</a>
+                                        <a href="" class="nav-link dropdown-toggle" id="dropdownMenuButto" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Category</a>
                                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButto">
                                             <?php foreach($category as $cate){?>
                                             <form action="<?php echo base_url()?>frontend/search/fetch_category" method="post">
@@ -392,7 +443,41 @@
         </div> <!-- navbar area -->
     </header>
     <!--Header End-->
+
+<div id="search_box" class="search_bar_class">
+    <form action="<?php echo base_url()?>frontend/search/fetch_product" method="post">
+                                        <div class="serach_flex_nav">
+                                            <div class="left">
+                                                <input type="text" id="products" name="product" placeholder="Search Your Product" value="<?php echo $_SESSION['product']?>">
+                                            </div>
+                                            <div class="right">
+                                                <button class="search">Search</button>
+                                            </div>
+                                        </div>
+                                    </form>
+</div>
+
+
+
+<script>
+$(document).ready(function($) {
+    $('#search_box').hide();
+    $('#close_bu').hide();
+    $('#serach_bu').on('click',function(){
+        $('#search_box').show();
+        $('#close_bu').show();
+         $('#serach_bu').hide();
+    });
+    $('#close_bu').on('click',function(){
+        $('#search_box').hide();
+        $('#close_bu').hide();
+         $('#serach_bu').show();
+    });
     
+});
+
+
+</script>
     
     <script>
 jQuery(document).ready(function($) {

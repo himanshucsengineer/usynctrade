@@ -154,7 +154,7 @@
                         <option value="FOB">FOB</option>
                         <option value="CIF">CIF</option>
                         <option value="DAP">DAP</option>
-                        <option value="DOP">DOP</option>
+                        <option value="CRF">CRF</option>
                     </select>
                 </div>
             </div>

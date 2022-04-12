@@ -79,6 +79,18 @@
                   <th>Name</th>
                   <th>Email</th>
                   <th>Number</th>
+                  <th>Address</th>
+                  <th>city</th>
+                  <th>State</th>
+                  <th>Country</th>
+                  <th>Zip Code</th>
+                  <th>Company Name</th>
+                  <th>Primary Business</th>
+                  <th>Company Details</th>
+                  <th>Establlish Year</th>
+                  <th>Gst No</th>
+                  <th>Company Certification</th>
+                  <th>Role</th>
                   
                   <th>Action</th>
 
@@ -94,7 +106,20 @@
                       <td><?php echo $value['email']; ?></td>
                       <td><?php echo $value['number']; ?></td>
                      
+                      <td><?php echo $value['address']; ?></td>
+                      <td><?php echo $value['city']; ?></td>
+                      <td><?php echo $value['state']; ?></td>
+                      <td><?php echo $value['country']; ?></td>
                       
+                      <td><?php echo $value['zip_code']; ?></td>
+                      <td><?php echo $value['company_name']; ?></td>
+                      <td><?php echo $value['primary_business']; ?></td>
+                      <td><?php echo $value['company_details']; ?></td>
+                      
+                      <td><?php echo $value['establish_year']; ?></td>
+                      <td><?php echo $value['gst_no']; ?></td>
+                      <td><?php echo $value['company_certification']; ?></td>
+                      <td><?php echo $value['role_comapny']; ?></td>
                       <td><a class="delete_sliders" data-id="<?php echo $value['id']?>"  style="color: red;cursor: pointer;" data-toggle="tooltip" data-original-title="Delete"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
                     </form>
                   </tr>

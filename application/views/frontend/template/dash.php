@@ -45,10 +45,10 @@ $parts = basename($url);
                         </div>
                         <div id="mySidenav" class="sidenav">
                             <a href="javascript:void(0)" id="close" class="closebtn" onclick="closeNav()">&times;</a>
-                            <center><img class="slider_logo" src="<?php echo base_url()?>assets/img/logo.png">
+                            <center><a href="<?php echo base_url()?>"><img class="slider_logo" src="<?php echo base_url()?>assets/img/logo.png"></a>
                             </center>
-                            <a href="<?php echo base_url()?>user/dashboard"><button class="<?php echo ($parts == 'dashboard') ? "active" : "" ?>"><span
-                                        style="font-size:20px; margin-right:1.5rem;"><i class="fas fa-desktop"></i></span>My Dashboard</button></a>
+                            <!--<a href="<?php echo base_url()?>user/dashboard"><button class="<?php echo ($parts == 'dashboard') ? "active" : "" ?>"><span-->
+                            <!--            style="font-size:20px; margin-right:1.5rem;"><i class="fas fa-desktop"></i></span>My Dashboard</button></a>-->
 
                             <a href="<?php echo base_url()?>user/profile"><button class="<?php echo ($parts == 'profile') ? "active" : "" ?>"><span style="font-size:20px; margin-right:1.5rem;"><i
                                             class="fa fa-user"></i></span>Profile & Setting</button></a>

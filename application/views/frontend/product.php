@@ -26,11 +26,18 @@
 .conty_flag{
     width:25px;
 }
+.product_desction{
+        width:100%;
+        height:auto;
+        padding:2rem;
+        border-radius:10px;
+        box-shadow: 0px 4px 9px 0px #d3d4d6;
+    }
 </style>
 <?php foreach($product_details as $value){if($value['id'] == $parts){?>
 <div class="product_main_top">
        <div class="container">
-           <div class="row">
+           <div class="row product_desction">
                 <div class="col-md-4">
                     <div class="flex logo_slider">
                         <?php foreach($fetch_product_image as $pro_img){if($pro_img['product_id']==$value['id']){?>
@@ -74,7 +81,7 @@
                             </select>
                         </div>
                         <div class="col-md-6">
-                            <a href="#send_message"><button>Send your message to this supplier</button></a>
+                            <a href="#send_message"><button class="send_button">Send your message to this supplier</button></a>
                         </div>
                     </div>
                 </div>

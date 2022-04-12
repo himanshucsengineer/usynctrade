@@ -159,7 +159,7 @@
 
 <div class="join_deal">
     <div class="container-fluid">
-        <h2>Latest By Offers</h2>
+        <h2>Latest Buy Offers</h2>
         <div class="table-responsive t_box">
             <table id="example" class="table table-striped table-bordered dt-responsive nowrap" style="width:100%">
                 <thead>
@@ -269,9 +269,7 @@
              <div class="img_card">
                  <img src="<?php echo base_url()?>assets/img/logo.png" alt="" srcset="">
              </div>
-             <div class="img_card">
-                 <img src="<?php echo base_url()?>assets/img/logo.png" alt="" srcset="">
-             </div>
+             
              
          </div>
     </div>
@@ -290,7 +288,7 @@ $(document).ready(function() {
         dots: false,
         arrows: false,  
         autoplay: true,
-        autoplaySpeed: 100,
+        autoplaySpeed: 1000,
         responsive: [
         {
             breakpoint: 768,

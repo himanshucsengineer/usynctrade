@@ -19,7 +19,7 @@
 .product_main_top .fleag{
     width: 30px;
 }
-.product_main_top button{
+.product_main_top .send_button{
     width: 100%;
     height: auto;
     padding: .5rem;

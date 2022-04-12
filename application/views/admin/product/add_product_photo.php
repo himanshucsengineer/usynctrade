@@ -126,13 +126,13 @@
                                 <?php foreach ($fetch_category as $value) {?>
                                     <tr>
                                         <td><?php echo $value['id']?></td>
-                                        <?php foreach($list as $val){ if($val['id'] = $value['product_id']){?>
+                                        <?php foreach($list as $val){ if($val['id'] == $value['product_id']){?>
                                         <td><?php echo $val['name']?></td>
-                                        <?php }?>
+                                        <?php }}?>
                                         <td><img src="<?php echo base_url()?>upload/product/<?php echo $value['image']?>" alt=""></td>
                                         <td><a class="delete_sliders" data-id="<?php echo $value['id']?>"  style="color: red;cursor: pointer;" data-toggle="tooltip" data-original-title="Delete"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
                                     </tr>
-                                <?php }} ?>
+                                <?php } ?>
                             </tbody>
                         </table>
                     </div>
